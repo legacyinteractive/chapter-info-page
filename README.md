@@ -58,3 +58,10 @@ The site currently carries a prominent demo notice; the Chapter's name, meeting 
 - The Chapter site now uses a local web-optimised rendition of the user-supplied provincial coat of arms in both header and footer, replacing the former circular symbol. The 'ROYAL ARCH CONCEPT' header subtitle has been removed; the top-of-page demo disclaimer remains until approval.
 - Black body/card/officer/meeting/FAQ text replaces light grey copy for legibility. White text remains on dark hero, burgundy and footer backgrounds.
 - The supplied crest source was 408 × 469 pixels. For a true high-detail 4K logo, a larger authorised original is needed; simple enlargement cannot create detail. The deployed image is an optimised website icon, not a true 4K photograph.
+
+## Header and contrast refinement (9 October 2026)
+
+- Header/footer now use the Provincial Grand Lodge crest cropped from the established high-resolution transparent Provincial artwork, stored locally at `public/images/hampshire-provincial-lockup-hd.png`. The 2000px-wide lockup provides a detailed shield for small displays; this is **not** the requested 4K restoration master.
+- Black body copy replaces grey text on light surfaces; white content remains white on dark panels.
+- The group photo is presented uncropped with slightly more contrast. The **current low-resolution AVIF is unchanged**; the previously prepared higher-resolution photograph still needs importing for genuine sharpness.
+- The noindex and demo safeguards remain.
