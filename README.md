@@ -1,42 +1,47 @@
 # Chapter Information Page — demonstration
 
-A responsive, modern and spacious Royal Arch Chapter page concept, based on the layout agreed with Roddy. Built by Legacy Interactive for illustration only.
+A responsive, modern and spacious Royal Arch Chapter page concept, based on the layout approved for Roddy. Built by Legacy Interactive.
 
-## Preview / deployment
+## Cloudflare Worker (GitHub deployment)
 
-This repository is a framework-free **static Cloudflare Pages site**. To publish:
+This repository is configured for **Cloudflare Workers with Static Assets**, which matches the existing `chapter-info-page` application shown in Cloudflare.
 
-1. Open **Cloudflare → Workers & Pages → Create application → Pages → Import existing Git repository**.
-2. Select **legacyinteractive/chapter-info-page**.
-3. Choose **production branch: main**, **framework preset: None**, **build command: exit 0**, **build output directory: .** (repository root).
-4. Deploy. The generated **pages.dev** URL can be shared for design review. Further pushes to `main` will trigger builds when Git integration is configured.
+Files:
+- `wrangler.jsonc` — Cloudflare Worker configuration, including the `./public` assets directory
+- `public/index.html` — complete standalone, responsive website
+- `public/robots.txt` and `public/_headers` — demo publication safeguards
+- `package.json` — no-op build and Wrangler deploy commands
 
-> Deployment is not automatic until the repository has been connected to a Cloudflare Pages project. No Cloudflare credentials or workflows are checked into this repository.
+For **Workers & Pages → chapter-info-page → Settings → Builds**:
+- Repository: `legacyinteractive/chapter-info-page`
+- Branch: `main`
+- Root directory: `/` (repository root)
+- Build command: `npm run build` (or leave unset)
+- Deploy command: `npx wrangler deploy`
+- Assets directory: automatically `./public` from Wrangler configuration
 
-## Current functionality
+Cloudflare should install the npm development dependency and use Wrangler to upload the static assets. A successful run will serve `index.html` on the default Worker route.
 
-- Split-image hero with chapter introduction, meeting information and joining-pack download
-- Burgundy quick-link bar and modern card sections
-- History, benefits, photo gallery with accessible lightbox, officers, sample meetings, FAQs and contact panel
-- Responsive phone/tablet/desktop navigation
-- Demo-only enquiry modal (no transmission or storage)
-- Browser-generated **sample PDF** joining pack (not an official Royal Arch document)
-- Search engine indexing discouraged through robots instructions and `noindex`
+If a deployment still fails, open the specific failed build → **Build logs**, copy the first clear error message, and investigate that error rather than changing the project type.
 
-## Before production
+> This repository does not include Cloudflare credentials, live enquiry configuration or a backend.
 
-- **Replace the example name, number, location, history and meeting dates** with verified Chapter details.
-- Get permission to use actual Chapter images and approved badges/crests, and replace the illustrative stock photographs.
-- Obtain permission for any Provincial branding; the site is currently clearly marked **not official**.
-- Replace the demo-only form with a secure, consent-aware enquiry flow to the recipient agreed by the Chapter. Add anti-spam protection and a privacy notice.
-- Replace the sample PDF with the Chapter's approved joining information pack.
-- Remove `noindex`, X-Robots-Tag and robots disallow only when the site is approved for public launch.
-- Confirm actual accessible meeting information, officer names and contact arrangements.
+## Included sections and interactions
 
-## Images
+- Split photographic hero + Chapter introduction and illustrative meeting details
+- Burgundy quick-link strip; chapter history and benefits
+- Gallery with image lightbox; example officers and upcoming meetings
+- FAQ accordions and contact panel
+- Responsive desktop, iPad and mobile styles with collapsible navigation
+- Demo-only enquiry modal: personal details are not sent, saved or emailed
+- Browser-generated sample joining-information PDF (not an official document)
 
-During this concept stage, the page uses illustrative photographs served from Pexels (IDs 35980786, 33939742, 35189972, 31282634). These are not photos of the example Chapter or the Southampton Masonic Centre. Credit and replace as appropriate before public launch.
+## Before real publication
 
-## Stack
+1. Confirm actual Chapter identity, location, founding history, meeting dates and officer names.
+2. Replace stock imagery with approved Chapter photos; confirm rights to crests and Provincial branding.
+3. Arrange a genuine consent-aware email/form delivery mechanism with CAPTCHA/anti-spam, privacy notice and data retention rules.
+4. Replace the sample PDF with the official, approved information pack.
+5. Remove demo ribbon, robots disallow and `noindex` only after explicit approval for public launch.
 
-A single `index.html` with accessible semantic HTML, CSS and a small amount of browser JavaScript. No npm install, external JS libraries, API keys, backend or database required.
+The site currently carries a prominent demo notice; the Chapter's name, meeting information, logo treatment and some photographs are illustrative.
