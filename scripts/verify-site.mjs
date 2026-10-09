@@ -21,6 +21,10 @@ assert(html.includes('href="#main-content"')&&html.includes('id="main-content"')
 assert(html.includes('id="demo-enquiry"')&&html.includes('e.preventDefault()'),'demo enquiry guard missing');
 assert(html.includes('<footer class="footer" aria-label="Wolvesey Chapter website information">'),'semantic Chapter footer missing');
 assert(html.includes('Royal Arch Freemasonry in Winchester'),'local SEO heading/title missing');
+assert(html.includes('North Central Area')&&!html.includes('South Central Area'),'incorrect Chapter area');
+assert(html.includes('family=Manrope:wght@400;500;600;700;800'),'Manrope font stylesheet missing');
+assert(html.includes('--site-font:"Manrope"'),'global Manrope token missing');
+assert(!/Georgia|Times New Roman|font-family:Inter/.test(html),'old fonts remain');
 assert(html.includes('<address>Winchester Masonic Centre'),'Chapter location address missing');
 assert(html.includes('January, March, October and December'),'meeting months in body/footer missing');
 assert(html.includes('Gallery imagery is illustrative'),'image origin disclosure missing');
