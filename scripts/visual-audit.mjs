@@ -35,9 +35,14 @@ try {
         const footer = document.querySelector('.footer--prestige');
         const crest = document.querySelector('.header .brand-logo img');
         const group = document.querySelector('.history-photo img');
+        const clipping = [...document.querySelectorAll('.footer--prestige .prestige-grid > *, .footer--prestige .prestige-bottom > *, .header .brand-name')].filter(el => {
+          const style = getComputedStyle(el);
+          return style.overflowX !== 'visible' && el.scrollWidth > el.clientWidth + 3;
+        }).map(el => el.className || el.tagName);
         return {
           clientWidth:w,
           scrollWidth,
+          clipping,
           footerWidth:Math.round(footer?.getBoundingClientRect().width||0),
           crestLoaded:Boolean(crest?.complete && crest.naturalWidth),
           groupLoaded:Boolean(group?.complete && group.naturalWidth),
@@ -45,6 +50,7 @@ try {
           chapterVisible:Boolean(document.querySelector('h1')?.textContent?.includes('Wolvesey'))
         };
       });
+      if (metrics.clipping.length) failures.push(size.name+': clipped text containers '+metrics.clipping.join(', '));
       if (metrics.scrollWidth > metrics.clientWidth + 2) {
         failures.push(size.name+': horizontal overflow of '+(metrics.scrollWidth-metrics.clientWidth)+'px');
       }
@@ -65,6 +71,19 @@ try {
         }
       }
       if(size.name==='desktop'){
+        const formButton = page.locator('[data-enquire]').first();
+        await formButton.click();
+        const dialog=page.locator('#enquiry-dialog');
+        if(!(await dialog.evaluate(el=>el.open))) failures.push('desktop: demo enquiry did not open');
+        await page.locator('#enquiry-name').fill('Example Visitor');
+        await page.locator('#enquiry-email').fill('visitor@example.invalid');
+        await page.locator('#enquiry-message').fill('This is a test only.');
+        await page.locator('#demo-enquiry button[type="submit"]').click();
+        if(!(await page.locator('#form-status').isVisible())) failures.push('desktop: demo enquiry confirmation not shown');
+        await page.keyboard.press('Escape');
+        await page.waitForTimeout(100);
+        if(await dialog.evaluate(el=>el.open)) failures.push('desktop: demo enquiry did not close');
+        if(await page.locator('#enquiry-name').inputValue()) failures.push('desktop: demo enquiry did not clear entered values');
         await page.locator('[data-gallery="0"]').click();
         const galleryOpen=await page.locator('#gallery-dialog').evaluate(el=>el.open);
         if(!galleryOpen) failures.push('desktop: gallery lightbox failed to open');

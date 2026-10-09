@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#81042c">
+  <meta name="theme-color" content="#071723">
   <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="Learn about Wolvesey Chapter No. 6818, Royal Arch Freemasonry in Winchester. Meetings at Winchester Masonic Centre in January, March, October and December.">
   <title>Wolvesey Chapter No. 6818 | Royal Arch Freemasonry in Winchester</title>
@@ -12,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <style>
+    [hidden]{display:none!important}
+
     :root{--burgundy:#89052f;--wine:#670022;--wine-deep:#470019;--navy:#111111;--ink:#111111;--muted:#111111;--cream:#f7f5ef;--ivory:#fbfaf8;--line:#e9e6e2;--gold:#be9d65;--site-font:"Manrope",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--shadow:0 15px 50px rgba(28,31,38,.07)}
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth;scroll-padding-top:92px}
@@ -509,6 +511,22 @@
       html:focus-within{scroll-behavior:auto}
     }
 
+
+    /* Final preview: clear image provenance, accessible controls and spacing. */
+    .contact-venue-photo{position:relative;margin:0;isolation:isolate;overflow:hidden}
+    .contact-venue-photo::after{content:"";position:absolute;inset:auto 0 0;height:110px;background:linear-gradient(0deg,rgba(0,0,0,.7),transparent);pointer-events:none}
+    .contact-venue-photo figcaption{position:absolute;z-index:2;bottom:17px;left:20px;right:20px;font:750 12px/1.55 var(--site-font);letter-spacing:.02em;color:#fff;text-shadow:0 1px 4px #0008}
+    .history .button-outline{min-height:44px}
+    .contact-section .button-primary{min-height:46px;max-width:100%;text-align:center}
+    .gallery-dialog figcaption{line-height:1.55}
+    .intro-details .download-card button:focus-visible{outline-offset:4px}
+    .footer--prestige .prestige-links a:focus-visible,
+    .footer--prestige .prestige-download:focus-visible{outline:3px solid var(--ft-gold);outline-offset:3px}
+    @media(max-width:650px){
+      .contact-venue-photo figcaption{bottom:13px;left:15px;font-size:11px}
+      .contact-section .copy{padding:30px 24px}
+    }
+
   </style>
 </head>
 <body>
@@ -576,12 +594,12 @@
     <nav class="quick-links" aria-label="Chapter quick links">
       <a class="quick-link" href="https://www.ugle.org.uk/about-us/royal-arch" target="_blank" rel="noopener noreferrer"><span class="icon-disc"><svg fill="none" stroke="currentColor" stroke-width="1.9"><use href="#book"></use></svg></span><span>Learn about the<br>Royal Arch <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></span></a>
       <a class="quick-link" href="#meetings"><span class="icon-disc"><svg fill="none" stroke="currentColor" stroke-width="1.9"><use href="#calendar"></use></svg></span><span>Regular Chapter<br>meetings <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></span></a>
-      <a class="quick-link" href="#officers"><span class="icon-disc"><svg fill="none" stroke="currentColor" stroke-width="1.9"><use href="#users"></use></svg></span><span>Our members<br>and officers <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></span></a>
+      <a class="quick-link" href="#officers"><span class="icon-disc"><svg fill="none" stroke="currentColor" stroke-width="1.9"><use href="#users"></use></svg></span><span>Chapter officers<br>and leadership <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></span></a>
       <a class="quick-link" href="#contact"><span class="icon-disc"><svg fill="none" stroke="currentColor" stroke-width="1.9"><use href="#pin"></use></svg></span><span>Contact Wolvesey<br>Chapter <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></span></a>
     </nav>
     <div class="content-stack">
       <section id="history" class="panel history">
-        <div class="copy"><span class="eyebrow">A living tradition</span><h2 class="section-heading">Our Chapter History</h2><p>Wolvesey Chapter No. 6818 meets in Winchester, a city rich in history and Masonic tradition. This section will tell the Chapter’s own story and introduce the Companions and milestones that have shaped it.</p><p>Its founding history and milestones will be added once the Chapter has confirmed the details.</p><a href="#contact" class="button-outline">Discover our Chapter <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></a></div>
+        <div class="copy"><span class="eyebrow">A living tradition</span><h2 class="section-heading">Our Chapter History</h2><p>Wolvesey Chapter No. 6818 meets in Winchester, a city rich in history and Masonic tradition. This section will tell the Chapter’s own story and introduce the Companions and milestones that have shaped it.</p><p>Its founding history and milestones will be added once the Chapter has confirmed the details.</p><a href="#contact" class="button-outline">Enquire about our Chapter <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></a></div>
         <figure class="image-wrap history-photo"><img src="/images/wolvesey-chapter-companions-clear.png" alt="Black-and-white photograph of Wolvesey Chapter companions wearing Royal Arch regalia" loading="lazy" decoding="async" width="1536" height="1024"><figcaption>Wolvesey Chapter No. 6818 <span aria-hidden="true">·</span> Our Companions</figcaption></figure>
       </section>
       <section id="benefits" class="panel cream-panel benefits">
@@ -632,8 +650,8 @@
         </section>
       </div>
       <section id="contact" class="panel contact-section">
-        <div class="image-wrap"><img src="/images/chilcomb-down-view.webp" alt="Gardens and views towards Chilcomb Down from Chilcomb Down House" loading="lazy" decoding="async"></div>
-        <div class="copy"><span class="eyebrow">Start a conversation</span><h2 class="section-heading">Get in touch</h2><p>Would you like to learn more about joining, visiting or taking the next step in the Royal Arch? We'd be delighted to hear from you.</p><button class="button-primary" type="button" data-enquire>Enquire about this Chapter <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></button><p class="hint">This concept's enquiry form is a demonstration only. No messages are transmitted.</p></div>
+        <figure class="image-wrap contact-venue-photo"><img src="/images/chilcomb-down-view.webp" alt="Gardens and views towards Chilcomb Down from Chilcomb Down House" loading="lazy" decoding="async"><figcaption>Illustrative image · Chilcomb Down House</figcaption></figure>
+        <div class="copy"><span class="eyebrow">Start a conversation</span><h2 class="section-heading">Get in touch</h2><p>Interested in joining, visiting or taking the next step in the Royal Arch? This preview demonstrates how visitors could enquire once the Chapter's contact service is enabled.</p><button class="button-primary" type="button" data-enquire>Enquire about this Chapter <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></button><p class="hint">This concept's enquiry form is a demonstration only. No messages are transmitted.</p></div>
       </section>
     </div>
   </main>

@@ -47,6 +47,11 @@ assert(html.includes('srcset="https://images.unsplash.com/')&&html.includes('siz
 assert(!html.includes('id="gallery-large" src=""'),'empty gallery initial src returned');
 assert(html.includes('class="footer footer--prestige"')&&html.includes('prestige-grid>:nth-child(5){grid-column:2 / 4}'),'tablet prestige footer grid missing');
 assert(html.includes('class="prestige-top-link"'),'back-to-top footer link missing');
+assert(html.includes('class="image-wrap contact-venue-photo"'),'contact photo disclosure missing');
+assert(html.includes('Chapter officers<br>and leadership'),'chapter quick link still inaccurate');
+assert(html.includes('Enquire about our Chapter'),'chapter history call to action incorrect');
+assert(html.includes('[hidden]{display:none!important}'),'hidden status state not enforced');
+assert(html.includes('<meta name="theme-color" content="#071723">'),'theme colour differs from approved midnight navy');
 const openScripts=[...html.matchAll(/<script(?![^>]*src)[^>]*>([\s\S]*?)<\/script>/g)];
 assert(openScripts.length===1,'unexpected inline script count');
 if(openScripts.length===1){try{new Function(openScripts[0][1]);}catch(error){failures.push('JavaScript parse error: '+error.message);}}

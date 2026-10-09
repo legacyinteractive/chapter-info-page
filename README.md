@@ -122,3 +122,11 @@ This workflow runs a private local preview within GitHub Actions. It **does not 
 - Confirm provincial crest approval, photographic rights and brand usage.
 - Decide on privacy notice/contact processing and approved PDF contents.
 - Confirm Cloudflare browser smoke tests, mobile screenshots and successful deployment. **Do not remove noindex or the demo-only enquiry behaviour** before those gates.
+
+## Final polish pass — 9 October 2026
+
+- Updated the history call-to-action to accurately describe its contact-section destination; made the officers quick-link match the information actually listed.
+- Labelled the illustrative Chilcomb Down House contact photograph directly on the image, while keeping the hero's Winchester Cathedral local context.
+- Explained that the concept enquiry service is not yet live; the form does not send or store submissions.
+- Updated the mobile contact panel, focus states, status visibility and browser theme-colour alignment with the approved midnight-navy footer.
+- Expanded the Chromium browser audit to check potential clipping of constrained footer containers and test the enquiry modal's open/submit/Escape/reset behaviour. No change to production data, workers or Cloudflare settings.
