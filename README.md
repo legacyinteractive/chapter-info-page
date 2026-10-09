@@ -48,7 +48,7 @@ The site currently carries a prominent demo notice; the Chapter's name, meeting 
 
 ## First polish pass (9 October 2026)
 
-- The Chapter History panel now features a genuine dressed dining-room photograph from the Chilcomb Down House repository (rather than a generic grand hall).
-- The four image gallery cards and the contact-area photo feature authentic Chilcomb Down House photography, with truthful captions and alt text. They do **not** imply that the images were taken at a Wolvesey Chapter meeting.
-- Adjusted image cropping, captions, keyboard hover behaviour and panel typography/spacing.
+- The Chapter History panel now features the group photograph supplied for Wolvesey Chapter No. 6818 (rather than the Chilcomb Down House dining-room photo). Its 480 × 360 AVIF copy is optimised for the demo; the original can replace it when required.
+- The four image gallery cards and the contact-area photo continue to feature authentic Chilcomb Down House photography, with truthful captions and alt text. They do **not** imply that the images were taken at a Wolvesey Chapter meeting.
+- Adjusted image cropping, captions, keyboard hover behaviour and panel typography/spacing; the Chapter group photo is positioned to keep faces in view on desktop and fully visible on mobile.
 - The site hero still uses illustrative stock imagery; authentic Chapter-specific imagery can replace it when approved. The demonstration remains marked as such.
