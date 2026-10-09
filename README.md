@@ -45,3 +45,10 @@ If a deployment still fails, open the specific failed build → **Build logs**, 
 5. Remove demo ribbon, robots disallow and `noindex` only after explicit approval for public launch.
 
 The site currently carries a prominent demo notice; the Chapter's name, meeting information, logo treatment and some photographs are illustrative.
+
+## First polish pass (9 October 2026)
+
+- The Chapter History panel now features a genuine dressed dining-room photograph from the Chilcomb Down House repository (rather than a generic grand hall).
+- The four image gallery cards and the contact-area photo feature authentic Chilcomb Down House photography, with truthful captions and alt text. They do **not** imply that the images were taken at a Wolvesey Chapter meeting.
+- Adjusted image cropping, captions, keyboard hover behaviour and panel typography/spacing.
+- The site hero still uses illustrative stock imagery; authentic Chapter-specific imagery can replace it when approved. The demonstration remains marked as such.

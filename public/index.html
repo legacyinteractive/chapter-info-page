@@ -67,13 +67,17 @@
     .quick-link span:last-child svg{width:16px;height:16px;margin-left:5px}
     .content-stack{display:grid;gap:17px;padding:24px clamp(16px,1.2vw,20px) 0}
     .panel{background:#fff;border:1px solid #eceae6;box-shadow:0 7px 30px #1b213309;border-radius:8px;overflow:hidden}
+    .panel :where(p){line-height:1.78}
+    .panel :where(h2){text-wrap:balance}
     .section-pad{padding:clamp(26px,3.25vw,50px)}
     .section-heading::after{content:"";display:block;width:44px;height:2px;background:var(--gold);margin-top:14px;margin-bottom:20px}
     .history{display:grid;grid-template-columns:1fr 1fr;min-height:330px}
     .history .copy{padding:clamp(27px,3.4vw,53px);align-self:center}
     .history .copy p{font-size:15px;max-width:580px}
-    .history .image-wrap{position:relative;min-height:340px;background:#dad4cc}
-    .history img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+    .history .image-wrap{position:relative;min-height:340px;background:#dad4cc;margin:0;isolation:isolate;overflow:hidden}
+    .history img{width:100%;height:100%;object-fit:cover;object-position:center 53%;position:absolute;inset:0}
+    .history-photo::after{content:"";position:absolute;inset:auto 0 0;height:34%;background:linear-gradient(0deg,rgba(14,19,30,.62),transparent);pointer-events:none}
+    .history-photo figcaption{position:absolute;bottom:18px;left:23px;z-index:1;font-size:12px;font-weight:700;letter-spacing:.04em;color:white;text-shadow:0 1px 6px #0007}
     .cream-panel{background:var(--ivory)}
     .benefits{display:grid;grid-template-columns:1.22fr repeat(4,1fr);gap:4px;align-items:center;padding:34px 32px}
     .benefit-intro{padding-right:30px}
@@ -91,9 +95,9 @@
     .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
     .gallery-item{display:block;height:230px;position:relative;background:#c8c0b7;overflow:hidden;border:0;padding:0;border-radius:5px}
     .gallery-item img{height:100%;width:100%;object-fit:cover;transition:transform .35s}
-    .gallery-item:hover img{transform:scale(1.045)}
+    .gallery-item:hover img,.gallery-item:focus-visible img{transform:scale(1.045)}
     .gallery-item::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#080b166e,transparent 60%)}
-    .gallery-item span{position:absolute;z-index:1;left:16px;bottom:15px;color:#fff;font-size:13px;font-weight:700}
+    .gallery-item span{position:absolute;z-index:1;left:16px;bottom:15px;color:#fff;font-size:13px;font-weight:700;letter-spacing:.01em;text-shadow:0 2px 6px #0009}
     .officers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
     .officer{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:5px;padding:16px;background:#fff}
     .officer .avatar{background:#f3ede6;color:var(--burgundy);border-radius:50%;width:55px;height:55px;display:grid;place-items:center;flex:none}
@@ -165,7 +169,7 @@
  <symbol id="close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
 </svg>
 <div class="site-shell">
-  <div class="demo-ribbon"><strong>Website concept</strong><span>Illustrative chapter details and photographs · Not an official Provincial website</span></div>
+  <div class="demo-ribbon"><strong>Website concept</strong><span>Draft Chapter information · Some hero imagery illustrative · Not an official Provincial website</span></div>
   <header class="header">
     <a class="brand" href="#top" aria-label="Chapter concept home">
       <span class="crest"><svg fill="none" stroke="currentColor"><use href="#delta"></use></svg></span>
@@ -218,7 +222,7 @@
     <div class="content-stack">
       <section id="history" class="panel history">
         <div class="copy"><span class="eyebrow">A living tradition</span><h2 class="section-heading">Our Chapter History</h2><p>Wolvesey Chapter No. 6818 meets in Winchester, a city rich in history and Masonic tradition. This section will tell the Chapter’s own story and introduce the Companions and milestones that have shaped it.</p><p>Its founding history and milestones will be added once the Chapter has confirmed the details.</p><a href="#contact" class="button-outline">Discover our Chapter <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></a></div>
-        <div class="image-wrap"><img src="https://images.pexels.com/photos/33939742/pexels-photo-33939742.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Illustrative photograph of an elegant historic English meeting hall" loading="lazy"></div>
+        <figure class="image-wrap history-photo"><img src="/images/chilcomb-dressed-dining.webp" alt="Dressed dining tables in the function room at Chilcomb Down House, Winchester" loading="lazy" decoding="async" width="1080" height="720"><figcaption>Chilcomb Down House <span aria-hidden="true">·</span> Winchester</figcaption></figure>
       </section>
       <section id="benefits" class="panel cream-panel benefits">
         <div class="benefit-intro"><span class="eyebrow">Belong &amp; discover</span><h2>Why join our Chapter?</h2><p>Build lasting friendships, explore the Royal Arch and be part of an active community.</p></div>
@@ -228,12 +232,12 @@
         <div class="benefit"><span class="benefit-icon"><svg fill="none" stroke="currentColor" stroke-width="1.7"><use href="#spark"></use></svg></span><h3>Rich Tradition</h3><p>Discover a heritage with meaning and purpose.</p></div>
       </section>
       <section id="gallery" class="panel section-pad">
-        <div class="section-topline"><h2>Chapter Gallery</h2><span class="badge-demo">Illustrative images</span></div>
+        <div class="section-topline"><div><span class="eyebrow">Our Winchester setting</span><h2>Chapter Gallery</h2></div><span class="badge-demo">Chilcomb Down House photos</span></div>
         <div class="gallery-grid">
-          <button class="gallery-item" type="button" data-gallery="0"><img src="https://images.pexels.com/photos/33939742/pexels-photo-33939742.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Historic guildhall interior" loading="lazy"><span>Heritage &amp; tradition</span></button>
-          <button class="gallery-item" type="button" data-gallery="1"><img src="https://images.pexels.com/photos/35189972/pexels-photo-35189972.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Historic stone architecture" loading="lazy"><span>Historic setting</span></button>
-          <button class="gallery-item" type="button" data-gallery="2"><img src="https://images.pexels.com/photos/31282634/pexels-photo-31282634.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Historic formal hall interior" loading="lazy"><span>Meeting together</span></button>
-          <button class="gallery-item" type="button" data-gallery="3"><img src="https://images.pexels.com/photos/35980786/pexels-photo-35980786.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Gothic stone building" loading="lazy"><span>Local character</span></button>
+          <button class="gallery-item" type="button" data-gallery="0" aria-label="View the dressed dining room photograph"><img src="/images/chilcomb-dressed-dining.webp" alt="Function room set for dining at Chilcomb Down House" loading="lazy" decoding="async"><span>Dining &amp; fellowship</span></button>
+          <button class="gallery-item" type="button" data-gallery="1" aria-label="View the Masonic display photograph"><img src="/images/chilcomb-masonic-roll.webp" alt="Display of Masonic regalia and emblems at Chilcomb Down House" loading="lazy" decoding="async"><span>Masonic heritage</span></button>
+          <button class="gallery-item" type="button" data-gallery="2" aria-label="View the meeting room photograph"><img src="/images/chilcomb-meeting-conference.webp" alt="Meeting and conference room at Chilcomb Down House" loading="lazy" decoding="async"><span>Meeting spaces</span></button>
+          <button class="gallery-item" type="button" data-gallery="3" aria-label="View the garden photograph"><img src="/images/chilcomb-down-view.webp" alt="Garden and views across Chilcomb Down from the venue" loading="lazy" decoding="async"><span>Chilcomb Down views</span></button>
         </div>
       </section>
       <section id="officers" class="panel section-pad">
@@ -264,7 +268,7 @@
         </section>
       </div>
       <section id="contact" class="panel contact-section">
-        <div class="image-wrap"><img src="https://images.pexels.com/photos/35189972/pexels-photo-35189972.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1150" alt="Illustrative English historic stone exterior" loading="lazy"></div>
+        <div class="image-wrap"><img src="/images/chilcomb-down-view.webp" alt="Gardens and views towards Chilcomb Down from Chilcomb Down House" loading="lazy" decoding="async"></div>
         <div class="copy"><span class="eyebrow">Start a conversation</span><h2 class="section-heading">Get in touch</h2><p>Would you like to learn more about joining, visiting or taking the next step in the Royal Arch? We'd be delighted to hear from you.</p><button class="button-primary" type="button" data-enquire>Enquire about this Chapter <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></button><p class="hint">This concept's enquiry form is a demonstration only. No messages are transmitted.</p></div>
       </section>
     </div>
@@ -274,7 +278,7 @@
       <div><a class="brand" href="#top"><span class="crest"><svg fill="none" stroke="currentColor"><use href="#delta"></use></svg></span><span class="brand-name">Hampshire &amp; Isle of Wight<br>Freemasons</span></a><p style="margin-top:18px">A Royal Arch Chapter page concept created to show how local Chapters could share their history, meeting information and welcoming spirit online.</p></div>
       <div><h3>Explore</h3><div class="footer-links"><a href="#about">About the Chapter</a><a href="#history">Chapter History</a><a href="#meetings">Meeting Dates</a><a href="#officers">Our Officers</a></div></div>
       <div><h3>Useful information</h3><div class="footer-links"><a href="https://www.ugle.org.uk/about-us/royal-arch" target="_blank" rel="noopener noreferrer">About the Royal Arch ↗</a><a href="#faq">Frequently Asked Questions</a><a href="#contact">Contact Us</a><button id="footer-download" type="button" style="background:none;border:0;padding:0;color:#c8d1dd;text-align:left;font-size:12px;cursor:pointer">Sample joining PDF ↓</button></div></div>
-      <div><h3>Chapter information</h3><p>Winchester Masonic Centre<br>Winchester, Hampshire<br><em>(meeting dates and contact information to be confirmed)</em></p><p>Images are illustrative stock photography rather than verified photographs of this Chapter.</p></div>
+      <div><h3>Chapter information</h3><p>Winchester Masonic Centre<br>Winchester, Hampshire<br><em>(meeting dates and contact information to be confirmed)</em></p><p>Venue photographs are from Chilcomb Down House. The hero image is illustrative, not a photograph of the Chapter.</p></div>
     </div>
     <div class="footer-bottom"><span>© 2026 Chapter website demonstration. Not an official Provincial publication.</span><span>Website concept built by <strong style="color:#fff">Legacy Interactive</strong></span></div>
   </footer>
@@ -310,7 +314,7 @@
   enquiry.addEventListener("click",function(e){if(e.target===enquiry)enquiry.close();});
   document.getElementById("demo-enquiry").addEventListener("submit",function(e){e.preventDefault();document.getElementById("form-status").hidden=false;});
   var lightbox=document.getElementById("gallery-dialog");
-  document.querySelectorAll("[data-gallery]").forEach(function(el){el.addEventListener("click",function(){var img=el.querySelector("img");document.getElementById("gallery-large").src=img.src.replace(/w=600/,"w=1500");document.getElementById("gallery-large").alt=img.alt;document.getElementById("gallery-caption").textContent=el.querySelector("span").textContent+" · illustrative stock image";lightbox.showModal();});});
+  document.querySelectorAll("[data-gallery]").forEach(function(el){el.addEventListener("click",function(){var img=el.querySelector("img");document.getElementById("gallery-large").src=img.src.replace(/w=600/,"w=1500");document.getElementById("gallery-large").alt=img.alt;document.getElementById("gallery-caption").textContent=el.querySelector("span").textContent+" · photograph of Chilcomb Down House, Winchester";lightbox.showModal();});});
   lightbox.querySelector(".close-dialog").addEventListener("click",function(){lightbox.close();});
   lightbox.addEventListener("click",function(e){if(e.target===lightbox)lightbox.close();});
   function downloadPack(){
