@@ -52,3 +52,9 @@ The site currently carries a prominent demo notice; the Chapter's name, meeting 
 - The four image gallery cards and the contact-area photo continue to feature authentic Chilcomb Down House photography, with truthful captions and alt text. They do **not** imply that the images were taken at a Wolvesey Chapter meeting.
 - Adjusted image cropping, captions, keyboard hover behaviour and panel typography/spacing; the Chapter group photo is positioned to keep faces in view on desktop and fully visible on mobile.
 - The site hero still uses illustrative stock imagery; authentic Chapter-specific imagery can replace it when approved. The demonstration remains marked as such.
+
+## Header & typography update (9 October 2026)
+
+- The Chapter site now uses a local web-optimised rendition of the user-supplied provincial coat of arms in both header and footer, replacing the former circular symbol. The 'ROYAL ARCH CONCEPT' header subtitle has been removed; the top-of-page demo disclaimer remains until approval.
+- Black body/card/officer/meeting/FAQ text replaces light grey copy for legibility. White text remains on dark hero, burgundy and footer backgrounds.
+- The supplied crest source was 408 × 469 pixels. For a true high-detail 4K logo, a larger authorised original is needed; simple enlargement cannot create detail. The deployed image is an optimised website icon, not a true 4K photograph.

@@ -18,10 +18,12 @@
     .site-shell{max-width:1520px;margin:auto;background:#fff;min-height:100vh;box-shadow:0 0 65px #17253e10}
     .demo-ribbon{background:#142541;color:#f4efe4;display:flex;align-items:center;justify-content:center;gap:12px;padding:8px 20px;font-size:12px;letter-spacing:.08em;text-align:center}
     .demo-ribbon strong{text-transform:uppercase;color:#eac88a;letter-spacing:.14em}
-    .header{height:86px;padding:0 clamp(22px,4.7vw,76px);display:flex;align-items:center;gap:40px;border-bottom:1px solid var(--line);position:relative;z-index:20;background:#fff}
+    .header{height:94px;padding:0 clamp(22px,4.7vw,76px);display:flex;align-items:center;gap:40px;border-bottom:1px solid var(--line);position:relative;z-index:20;background:#fff}
     .brand{display:flex;align-items:center;gap:12px;margin-right:auto;white-space:nowrap}
     .crest{width:51px;height:51px;display:grid;place-items:center;border:2px solid var(--burgundy);border-radius:50%;color:var(--burgundy)}
     .crest svg{width:35px;height:35px}
+    .brand-logo{display:flex;align-items:center;justify-content:center;width:57px;height:68px;flex:none}
+    .brand-logo img{width:100%;height:100%;object-fit:contain;display:block}
     .brand-name{font-family:Georgia,serif;color:var(--navy);font-weight:700;font-size:16px;line-height:1.14;letter-spacing:-.03em}
     .nav{display:flex;align-items:center;gap:clamp(13px,1.8vw,31px)}
     .nav a{font-size:13px;color:var(--ink);white-space:nowrap;font-weight:600;transition:color .15s}
@@ -132,6 +134,7 @@
     .footer .footer-links{display:flex;flex-direction:column;gap:6px}
     .footer .brand-name{color:white}
     .footer .crest{border-color:#bca06b;color:#eac58b}
+    .footer .brand-logo{padding:3px;background:#fff;border-radius:4px}
     .footer-bottom{border-top:1px solid #ffffff26;margin-top:38px;padding-top:20px;font-size:11px;color:#c3cbd6;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     .badge-demo{display:inline-block;font-size:11px;color:var(--burgundy);background:#f5e9ec;padding:3px 8px;border-radius:4px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
     dialog{max-width:min(570px,calc(100% - 30px));width:100%;border:0;border-radius:10px;padding:0;box-shadow:0 25px 100px #0005;color:var(--ink)}
@@ -148,9 +151,19 @@
     .gallery-dialog img{max-height:80vh;width:100%;object-fit:contain}
     .gallery-dialog figcaption{color:#fff;font-size:14px;padding:10px 18px}
     .gallery-dialog .close-dialog{z-index:2}
+    /* High-contrast black copy on light panels; preserve white on burgundy and dark backgrounds. */
+    :root{--ink:#101010;--muted:#101010;--navy:#101010}
+    body,h1,h2,h3,.nav a{color:#101010}
+    p,.meeting-list .item,.meeting-row span,.officer p,.benefit p,.download-card p,
+    .intro-details p,.hint,.form-label,summary,details p,.dialog-inner p{color:#101010}
+    .hero-copy :is(h1,p),.quick-link,.quick-link span,
+    .footer :is(p,a,h3,span),.footer .brand-name,.footer-bottom,
+    .gallery-item span,.history-photo figcaption,.demo-ribbon span{color:#fff}
+    .footer .footer-links button{color:#fff!important}
+    .form-control{color:#101010}
     @media (max-width:1180px){.header{gap:16px;padding:0 24px}.nav{gap:12px}.brand-name{font-size:14px}.nav a{font-size:12px}.header-cta{padding:12px 14px}.intro-details{padding:30px}.benefits{grid-template-columns:repeat(4,1fr)}.benefit-intro{grid-column:1/-1;padding:0 0 20px}.benefit:first-of-type{border-left:0}}
     @media (max-width:930px){.menu-toggle{display:block}.header{height:76px}.brand{margin-right:auto}.nav{display:none;position:absolute;left:0;right:0;top:76px;background:white;flex-direction:column;align-items:stretch;gap:0;padding:15px 28px 22px;box-shadow:0 16px 25px #0002}.nav.is-open{display:flex}.nav a{padding:12px 0;font-size:15px}.search-link{display:none}.intro{grid-template-columns:1fr}.hero-photo{min-height:535px}.intro-details{padding:40px}.quick-links{grid-template-columns:repeat(2,1fr)}.quick-link{min-height:110px}.quick-link:nth-child(2)::after{display:none}.benefits{grid-template-columns:repeat(2,1fr)}.benefit-intro{grid-column:1/-1}.benefit:nth-of-type(odd){border-left:0}.officers{grid-template-columns:repeat(2,1fr)}.footer-top{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:650px){body{font-size:15px}.demo-ribbon{font-size:10px;gap:7px;padding:8px}.main-content{padding:0 0 20px}.header{height:72px;padding:0 16px}.nav{top:72px}.crest{width:41px;height:41px}.crest svg{width:27px;height:27px}.brand-name{font-size:12px}.header-cta{display:none}.hero-photo{min-height:500px}.hero-copy{left:27px;bottom:30px}.hero-copy h1{font-size:clamp(2.4rem,11.3vw,4rem)}.intro-details{padding:30px 24px;gap:28px}.intro-details p{font-size:14px}.download-card{padding:18px;gap:13px}.download-card>.icon-large{width:36px;height:36px}.quick-link{padding:13px;gap:10px;min-height:95px}.quick-link .icon-disc{height:41px;width:41px}.quick-link .icon-disc svg{width:22px;height:22px}.quick-link span:last-child{font-size:13px}.quick-link span:last-child svg{display:none}.content-stack{padding:14px 12px 0;gap:12px}.history,.contact-section,.lower-grid{grid-template-columns:1fr}.history .image-wrap{min-height:290px}.history-photo img{object-fit:contain}.history .copy{padding:26px}.history .image-wrap{order:-1}.benefits{padding:26px 12px;gap:10px}.benefit{padding:10px 9px;min-height:142px}.benefit h3{font-size:15px}.section-pad{padding:24px 17px}.section-topline{align-items:baseline}.section-topline h2{font-size:1.75rem}.text-link{font-size:11px}.gallery-grid{grid-template-columns:repeat(2,1fr);gap:8px}.gallery-item{height:145px}.officers{grid-template-columns:1fr}.contact-section .image-wrap{min-height:260px}.footer{padding:35px 25px 18px}.footer-top{gap:26px 18px}.footer .brand{white-space:normal}.footer-bottom{margin-top:24px}.dialog-inner{padding:27px 20px}.section-heading::after{margin-bottom:14px}}
+    @media (max-width:650px){body{font-size:15px}.demo-ribbon{font-size:10px;gap:7px;padding:8px}.main-content{padding:0 0 20px}.header{height:72px;padding:0 16px}.nav{top:72px}.crest{width:41px;height:41px}.crest svg{width:27px;height:27px}.brand-logo{width:43px;height:52px}.brand-name{font-size:12px}.header-cta{display:none}.hero-photo{min-height:500px}.hero-copy{left:27px;bottom:30px}.hero-copy h1{font-size:clamp(2.4rem,11.3vw,4rem)}.intro-details{padding:30px 24px;gap:28px}.intro-details p{font-size:14px}.download-card{padding:18px;gap:13px}.download-card>.icon-large{width:36px;height:36px}.quick-link{padding:13px;gap:10px;min-height:95px}.quick-link .icon-disc{height:41px;width:41px}.quick-link .icon-disc svg{width:22px;height:22px}.quick-link span:last-child{font-size:13px}.quick-link span:last-child svg{display:none}.content-stack{padding:14px 12px 0;gap:12px}.history,.contact-section,.lower-grid{grid-template-columns:1fr}.history .image-wrap{min-height:290px}.history-photo img{object-fit:contain}.history .copy{padding:26px}.history .image-wrap{order:-1}.benefits{padding:26px 12px;gap:10px}.benefit{padding:10px 9px;min-height:142px}.benefit h3{font-size:15px}.section-pad{padding:24px 17px}.section-topline{align-items:baseline}.section-topline h2{font-size:1.75rem}.text-link{font-size:11px}.gallery-grid{grid-template-columns:repeat(2,1fr);gap:8px}.gallery-item{height:145px}.officers{grid-template-columns:1fr}.contact-section .image-wrap{min-height:260px}.footer{padding:35px 25px 18px}.footer-top{gap:26px 18px}.footer .brand{white-space:normal}.footer-bottom{margin-top:24px}.dialog-inner{padding:27px 20px}.section-heading::after{margin-bottom:14px}}
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:0.01ms!important;animation-duration:0.01ms!important}}
   </style>
 </head>
@@ -172,9 +185,9 @@
 <div class="site-shell">
   <div class="demo-ribbon"><strong>Website concept</strong><span>Draft Chapter information · Some hero imagery illustrative · Not an official Provincial website</span></div>
   <header class="header">
-    <a class="brand" href="#top" aria-label="Chapter concept home">
-      <span class="crest"><svg fill="none" stroke="currentColor"><use href="#delta"></use></svg></span>
-      <span class="brand-name">Hampshire &amp; Isle of Wight<br>Freemasons <span style="display:block;font:500 10px sans-serif;color:#8e1334;letter-spacing:.07em;margin-top:3px">ROYAL ARCH CONCEPT</span></span>
+    <a class="brand" href="#top" aria-label="Chapter home">
+      <span class="brand-logo"><img src="/images/hampshire-provincial-arms.webp" alt="Hampshire and Isle of Wight Provincial coat of arms" width="90" height="103" decoding="async"></span>
+      <span class="brand-name">Hampshire &amp; Isle of Wight<br>Freemasons</span>
     </a>
     <nav class="nav" id="site-nav" aria-label="Main navigation">
       <a href="#about">About</a><a href="#history">Our Heritage</a><a href="#benefits">Get Involved</a><a href="#gallery">Gallery</a><a href="#meetings">Meetings</a><a href="#faq" class="active">The Royal Arch</a>
@@ -276,7 +289,7 @@
   </main>
   <footer class="footer">
     <div class="footer-top">
-      <div><a class="brand" href="#top"><span class="crest"><svg fill="none" stroke="currentColor"><use href="#delta"></use></svg></span><span class="brand-name">Hampshire &amp; Isle of Wight<br>Freemasons</span></a><p style="margin-top:18px">A Royal Arch Chapter page concept created to show how local Chapters could share their history, meeting information and welcoming spirit online.</p></div>
+      <div><a class="brand" href="#top"><span class="brand-logo"><img src="/images/hampshire-provincial-arms.webp" alt="Hampshire and Isle of Wight Provincial coat of arms" width="90" height="103" loading="lazy" decoding="async"></span><span class="brand-name">Hampshire &amp; Isle of Wight<br>Freemasons</span></a><p style="margin-top:18px">A Royal Arch Chapter page concept created to show how local Chapters could share their history, meeting information and welcoming spirit online.</p></div>
       <div><h3>Explore</h3><div class="footer-links"><a href="#about">About the Chapter</a><a href="#history">Chapter History</a><a href="#meetings">Meeting Dates</a><a href="#officers">Our Officers</a></div></div>
       <div><h3>Useful information</h3><div class="footer-links"><a href="https://www.ugle.org.uk/about-us/royal-arch" target="_blank" rel="noopener noreferrer">About the Royal Arch ↗</a><a href="#faq">Frequently Asked Questions</a><a href="#contact">Contact Us</a><button id="footer-download" type="button" style="background:none;border:0;padding:0;color:#c8d1dd;text-align:left;font-size:12px;cursor:pointer">Sample joining PDF ↓</button></div></div>
       <div><h3>Chapter information</h3><p>Winchester Masonic Centre<br>Winchester, Hampshire<br><em>(meeting dates and contact information to be confirmed)</em></p><p>Venue photographs are from Chilcomb Down House. The hero image is illustrative, not a photograph of the Chapter.</p></div>
