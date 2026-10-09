@@ -1,0 +1,51 @@
+name: Chapter visual QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "public/**"
+      - "scripts/**"
+      - "package.json"
+      - ".github/workflows/chapter-visual-qa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: chapter-visual-qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  screenshots:
+    name: Responsive screenshots and interactions
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install project
+        run: npm install --ignore-scripts
+      - name: Verify static page
+        run: npm run check
+      - name: Install browser runner
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Start private local preview
+        run: |
+          nohup python3 -m http.server 4173 --directory public > /tmp/chapter-preview.log 2>&1 &
+          sleep 2
+      - name: Audit desktop, tablet, and mobile
+        run: node scripts/visual-audit.mjs
+      - name: Save screenshots and audit details
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wolvesey-chapter-visual-qa
+          path: artifacts/chapter-visual-qa/
+          if-no-files-found: warn
+          retention-days: 14

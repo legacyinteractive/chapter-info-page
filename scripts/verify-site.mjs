@@ -43,6 +43,10 @@ assert(html.includes('Regular Chapter<br>meetings')&&!html.includes('View upcomi
 assert(html.includes('enquiry.addEventListener("close"'),'demo enquiry reset handler missing');
 assert(html.includes('font-size:13px;line-height:1.55;min-height:30px'),'footer readable link style missing');
 assert(html.includes('Winchester Cathedral shown as local context'),'honest landmark label missing');
+assert(html.includes('srcset="https://images.unsplash.com/')&&html.includes('sizes="(max-width: 930px) 100vw, 53vw"'),'responsive cathedral image missing');
+assert(!html.includes('id="gallery-large" src=""'),'empty gallery initial src returned');
+assert(html.includes('class="footer footer--prestige"')&&html.includes('prestige-grid>:nth-child(5){grid-column:2 / 4}'),'tablet prestige footer grid missing');
+assert(html.includes('class="prestige-top-link"'),'back-to-top footer link missing');
 const openScripts=[...html.matchAll(/<script(?![^>]*src)[^>]*>([\s\S]*?)<\/script>/g)];
 assert(openScripts.length===1,'unexpected inline script count');
 if(openScripts.length===1){try{new Function(openScripts[0][1]);}catch(error){failures.push('JavaScript parse error: '+error.message);}}

@@ -107,3 +107,18 @@ The site currently carries a prominent demo notice; the Chapter's name, meeting 
 - The non-sending enquiry form now clears entered values when its dialog closes, a privacy-friendly behaviour for the demonstration.
 - Added regression checks for the new footer control, honest meeting label, demo form reset and contrast/spacing styles. Existing noindex, meeting months, location and original palette remain unchanged.
 - A live Cloudflare screenshot review remains outstanding; remote tool access to the Worker was unavailable during the check.
+
+## Automated cross-device browser QA — 9 October 2026
+
+GitHub Actions workflow `.github/workflows/chapter-visual-qa.yml` now checks the static demo in Chromium on pushes to `main` and on manual dispatch. Its Playwright script `scripts/visual-audit.mjs` captures whole-page and footer screenshots at **1440, 1280, 820, 390 and 360 pixels wide**, checking layout overflow, the mobile menu (including Escape), locally hosted crest/group images, the photo lightbox and sample joining-PDF download.
+
+You can retrieve the screenshots from **GitHub → Actions → Chapter visual QA → latest run → Artifacts → wolvesey-chapter-visual-qa**. Successful source checks are not a substitute for a manual visual review; inspect the screenshots before approval.
+
+This workflow runs a private local preview within GitHub Actions. It **does not change Cloudflare settings, deployments, real contact details or production data**.
+
+### Outstanding human approval before launch
+- Confirm the Chapter's official history, principals, Scribe E, real dates/times and approved enquiry destination.
+- Provide any preferred authentic gallery imagery and, if necessary, an authorised original full-resolution **colour** group photo. The current clear B&W image is 1536 × 1024, not native 4K colour.
+- Confirm provincial crest approval, photographic rights and brand usage.
+- Decide on privacy notice/contact processing and approved PDF contents.
+- Confirm Cloudflare browser smoke tests, mobile screenshots and successful deployment. **Do not remove noindex or the demo-only enquiry behaviour** before those gates.
