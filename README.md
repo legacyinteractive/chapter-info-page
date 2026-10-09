@@ -83,3 +83,10 @@ The site currently carries a prominent demo notice; the Chapter's name, meeting 
 - Rebuilt the footer with a descriptive **Wolvesey Chapter No. 6818 / Royal Arch Freemasonry in Winchester** heading, semantically labelled Chapter navigation, meeting location and regular months, real internal content links, official UGLE external information, and the Legacy Interactive credit.
 - Improved the title and meta description for a possible eventual production launch. `noindex`, demo disclaimers and mock enquiry operation remain unchanged. Do not remove noindex or advertise the site as official until there is publication approval and real contact details.
 - Updated the static QA checks for the changed meeting presentation, semantic footer and accurate gallery/officer disclaimers.
+
+## Header and site polish — 9 October 2026
+
+- Removed the main header's Contact Wolvesey button; existing enquiry sections and footer links remain.
+- Removed the fake search icon that only jumped to FAQs.
+- Refined header balance and navigation focus/hover, mobile menu target, hero image positioning, informational spacing, officer card finish, gallery shadows and FAQ cues.
+- Added static regression guards for the removal and the retained Chapter enquiry feature. Preview noindex is unchanged.

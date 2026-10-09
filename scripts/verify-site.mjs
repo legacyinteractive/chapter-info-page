@@ -19,6 +19,9 @@ assert(html.includes('Wolvesey Chapter')&&html.includes('Winchester Masonic Cent
 assert(['JAN','MAR','OCT','DEC'].every(m=>html.includes('class="month" aria-label="'+({JAN:'January',MAR:'March',OCT:'October',DEC:'December'})[m]+'">'+m+'</span>')),'meeting months incorrect');
 assert(html.includes('href="#main-content"')&&html.includes('id="main-content"'),'skip navigation missing');
 assert(html.includes('id="demo-enquiry"')&&html.includes('e.preventDefault()'),'demo enquiry guard missing');
+assert(!html.includes('class="header-cta"'),'removed header contact button returned');
+assert(!html.includes('class="search-link"'),'false search icon returned');
+assert(html.includes('id="contact"')&&html.includes('data-enquire'),'Chapter enquiry missing');
 assert(html.includes('<footer class="footer" aria-label="Wolvesey Chapter website information">'),'semantic Chapter footer missing');
 assert(html.includes('Royal Arch Freemasonry in Winchester'),'local SEO heading/title missing');
 assert(html.includes('North Central Area')&&!html.includes('South Central Area'),'incorrect Chapter area');
