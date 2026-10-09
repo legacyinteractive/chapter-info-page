@@ -98,3 +98,12 @@ The site currently carries a prominent demo notice; the Chapter's name, meeting 
 - Footer includes Chapter introduction, internal navigation, official UGLE Royal Arch link, January/March/October/December meeting months, Winchester Masonic Centre, honest photo notes and Legacy Interactive credit.
 - Responsive two/three-column tablet and stacked mobile layout. No invented privacy, social or sitemap links.
 - Updated QA. Demo noindex and the non-sending sample enquiry form are unchanged until approved.
+
+## Post-launch-preview polish — 9 October 2026
+
+- Improved the approved Classic & Prestigious navy-and-gold footer: stronger readability, larger links, tablet/mobile touch targets, and a functional gold-accented Back to top link.
+- Corrected the quick-link from “View upcoming meetings” to “Regular Chapter meetings”, because only meeting months have been confirmed, not actual dates.
+- Corrected Winchester Cathedral imagery description and the demonstration ribbon to avoid suggesting the landmark is the Chapter meeting venue.
+- The non-sending enquiry form now clears entered values when its dialog closes, a privacy-friendly behaviour for the demonstration.
+- Added regression checks for the new footer control, honest meeting label, demo form reset and contrast/spacing styles. Existing noindex, meeting months, location and original palette remain unchanged.
+- A live Cloudflare screenshot review remains outstanding; remote tool access to the Worker was unavailable during the check.
