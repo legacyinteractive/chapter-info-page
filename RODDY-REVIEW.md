@@ -6,8 +6,8 @@ Prepared for Roddy and the Wolvesey Chapter website review — 9 October 2026.
 
 - [Chapter preview](https://chapter-info-page.jack-576.workers.dev/)
 - [GitHub source](https://github.com/legacyinteractive/chapter-info-page)
-- [Passed visual QA and screenshots](https://github.com/legacyinteractive/chapter-info-page/actions/runs/37919321999): open the run, find **Artifacts**, and download **wolvesey-chapter-visual-qa** to inspect the desktop, laptop, iPad and phone views.
-- Source commit: `3776641a28dc2b0c667bf6ab0e6babc067053e96`.
+- [Passed final visual QA and screenshots](https://github.com/legacyinteractive/chapter-info-page/actions/runs/37927410666): open the run, find **Artifacts**, and download **wolvesey-chapter-visual-qa** to inspect the desktop, laptop, iPad and phone views.
+- Final finishing commit: `38902f06efc3f88613a3f07b9a0a0d3ae580975e`.
 
 ## What is ready for review
 
@@ -22,7 +22,7 @@ Prepared for Roddy and the Wolvesey Chapter website review — 9 October 2026.
 
 ## Technical checks recorded
 
-On 9 October 2026, [GitHub Actions run #37919321999](https://github.com/legacyinteractive/chapter-info-page/actions/runs/37919321999) completed successfully. Its private local Chromium preview checked:
+On 9 October 2026, [GitHub Actions run #37927410666](https://github.com/legacyinteractive/chapter-info-page/actions/runs/37927410666) completed successfully after the final polish commit. Its private local Chromium preview checked:
 
 | View | Width |
 | --- | ---: |
@@ -32,9 +32,17 @@ On 9 October 2026, [GitHub Actions run #37919321999](https://github.com/legacyin
 | Phone | 390px |
 | Small phone | 360px |
 
-The run also checked horizontal overflow, local crest/group images, mobile menu open/Escape-close, gallery lightbox and sample PDF download; screenshot artifacts were saved.
+The run also checked horizontal overflow, local crest/group images, mobile menu open/Escape-close, gallery lightbox, sample PDF download, constrained footer text clipping and the demonstration enquiry form's open/submit/Escape-close/reset behaviour. Screenshot artifacts were saved. The GitHub Actions job passed.
 
-These tests do **not** confirm that the current Cloudflare production preview is deployed successfully. The live Worker must still be checked in real browsers, and the saved screenshots should be visually reviewed before sharing widely.
+These tests do **not** confirm that the current Cloudflare preview has been deployed successfully. Access to the live Worker could not be independently established from the available environment; the DNS lookup failed. Inspect the screenshot artifact and verify the actual Cloudflare URL in a real browser before approving the preview.
+
+## Final polish changes
+
+- Preserved Manrope, North Central Area and the Classic & Prestigious midnight-navy and champagne-gold footer.
+- Responsive hero photography and overflow controls updated for phones, tablets and laptops.
+- Clarified that the Chilcomb contact image is illustrative; adjusted the history enquiry call-to-action and officer quick link to match their actual destination/content.
+- Confirmed the enquiry form remains demo-only and clears test values on close. No production contact backend or database operations were performed.
+- Static source QA and the enhanced five-viewport Chromium audit passed following the latest code changes.
 
 ## Remaining publication gates
 
