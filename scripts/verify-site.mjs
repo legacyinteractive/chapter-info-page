@@ -22,7 +22,12 @@ assert(html.includes('id="demo-enquiry"')&&html.includes('e.preventDefault()'),'
 assert(!html.includes('class="header-cta"'),'removed header contact button returned');
 assert(!html.includes('class="search-link"'),'false search icon returned');
 assert(html.includes('id="contact"')&&html.includes('data-enquire'),'Chapter enquiry missing');
-assert(html.includes('<footer class="footer" aria-label="Wolvesey Chapter website information">'),'semantic Chapter footer missing');
+assert(html.includes('<footer class="footer footer--prestige" aria-label="Wolvesey Chapter website information">'),'prestigious semantic footer missing');
+assert(html.includes("A Chapter with History, Fellowship and Purpose"),"prestigious footer heading missing");
+assert(html.includes("prestige-grid")&&html.includes("--ft-night:#061827"),"navy-gold footer styling missing");
+assert(html.includes('id="footer-download"'),"footer joining PDF action missing");
+assert(html.includes("Chilcomb Down House"),"photo provenance missing");
+assert(!html.includes('class="footer-intro"'),"outdated footer layout remains");
 assert(html.includes('Royal Arch Freemasonry in Winchester'),'local SEO heading/title missing');
 assert(html.includes('North Central Area')&&!html.includes('South Central Area'),'incorrect Chapter area');
 assert(html.includes('family=Manrope:wght@400;500;600;700;800'),'Manrope font stylesheet missing');

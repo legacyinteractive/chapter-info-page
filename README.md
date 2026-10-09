@@ -90,3 +90,11 @@ The site currently carries a prominent demo notice; the Chapter's name, meeting 
 - Removed the fake search icon that only jumped to FAQs.
 - Refined header balance and navigation focus/hover, mobile menu target, hero image positioning, informational spacing, officer card finish, gallery shadows and FAQ cues.
 - Added static regression guards for the removal and the retained Chapter enquiry feature. Preview noindex is unchanged.
+
+## Classic and Prestigious footer in midnight navy (9 October 2026)
+
+- Implemented the approved classic five-column layout in the deep midnight-navy, champagne-gold and ivory colours of Concept 3.
+- Preserved provincial crest and Manrope typography; added a subtle Winchester Cathedral backdrop.
+- Footer includes Chapter introduction, internal navigation, official UGLE Royal Arch link, January/March/October/December meeting months, Winchester Masonic Centre, honest photo notes and Legacy Interactive credit.
+- Responsive two/three-column tablet and stacked mobile layout. No invented privacy, social or sitemap links.
+- Updated QA. Demo noindex and the non-sending sample enquiry form are unchanged until approved.
