@@ -38,6 +38,11 @@ assert(html.includes('January, March, October and December'),'meeting months in 
 assert(html.includes('Gallery imagery is illustrative'),'image origin disclosure missing');
 assert(html.includes('Names awaiting confirmation'),'placeholder officer names disclosure missing');
 assert(!html.includes('Upcoming Meetings'),'unconfirmed upcoming events claim remains');
+assert(html.includes('class="prestige-top-link"')&&html.includes('href="#top"'),'footer back-to-top link missing');
+assert(html.includes('Regular Chapter<br>meetings')&&!html.includes('View upcoming<br>meetings'),'regular Chapter months quick link incorrect');
+assert(html.includes('enquiry.addEventListener("close"'),'demo enquiry reset handler missing');
+assert(html.includes('font-size:13px;line-height:1.55;min-height:30px'),'footer readable link style missing');
+assert(html.includes('Winchester Cathedral shown as local context'),'honest landmark label missing');
 const openScripts=[...html.matchAll(/<script(?![^>]*src)[^>]*>([\s\S]*?)<\/script>/g)];
 assert(openScripts.length===1,'unexpected inline script count');
 if(openScripts.length===1){try{new Function(openScripts[0][1]);}catch(error){failures.push('JavaScript parse error: '+error.message);}}
