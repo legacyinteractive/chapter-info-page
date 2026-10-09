@@ -74,3 +74,12 @@ The site currently carries a prominent demo notice; the Chapter's name, meeting 
 - Clarified that Chilcomb Down House gallery images are not photographs of Winchester Masonic Centre.
 - Added dependency-free static checks via `npm run check`, also run automatically during `npm run build`. They check broken internal anchors, duplicate IDs, missing local images, unsafe new-window links, demo noindex, meeting months, and JavaScript syntax.
 - This batch does not enable an enquiry backend, publish official meeting dates or relax the preview/demo safeguards.
+
+## Chapter gallery, officers, regular meetings and local SEO footer — 9 October 2026
+
+- Replaced the ambiguous "Upcoming Meetings" heading with "Regular Chapter Meetings" and displayed the four meeting months clearly, without inventing actual meeting dates.
+- Improved responsive Chapter officer cards and their role markers; names are still marked as awaiting confirmation.
+- Added improved gallery overlay cues and prominent provenance text. Chilcomb Down House is identified as a *different venue*, not the Chapter meeting centre.
+- Rebuilt the footer with a descriptive **Wolvesey Chapter No. 6818 / Royal Arch Freemasonry in Winchester** heading, semantically labelled Chapter navigation, meeting location and regular months, real internal content links, official UGLE external information, and the Legacy Interactive credit.
+- Improved the title and meta description for a possible eventual production launch. `noindex`, demo disclaimers and mock enquiry operation remain unchanged. Do not remove noindex or advertise the site as official until there is publication approval and real contact details.
+- Updated the static QA checks for the changed meeting presentation, semantic footer and accurate gallery/officer disclaimers.

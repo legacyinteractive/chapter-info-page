@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#81042c">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Explore Wolvesey Chapter No. 6818, a Royal Arch Chapter meeting at Winchester Masonic Centre. Website demonstration by Legacy Interactive.">
-  <title>Wolvesey Chapter No. 6818 | Royal Arch Chapter Concept</title>
-  <link rel="preconnect" href="https://images.pexels.com" crossorigin>
+  <meta name="description" content="Learn about Wolvesey Chapter No. 6818, Royal Arch Freemasonry in Winchester. Meetings at Winchester Masonic Centre in January, March, October and December.">
+  <title>Wolvesey Chapter No. 6818 | Royal Arch Freemasonry in Winchester</title>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <style>
     :root{--burgundy:#89052f;--wine:#670022;--wine-deep:#470019;--navy:#111111;--ink:#111111;--muted:#111111;--cream:#f7f5ef;--ivory:#fbfaf8;--line:#e9e6e2;--gold:#be9d65;--shadow:0 15px 50px rgba(28,31,38,.07)}
     *,*::before,*::after{box-sizing:border-box}
@@ -279,6 +279,70 @@
       .gallery-item img,.button-primary,.header-cta,.button-outline{transition:none}
     }
 
+
+    /* Batch 2: galleries, leadership, regular meeting months and descriptive footer. */
+    .gallery-introduction,.gallery-disclaimer,.section-intro{font-size:14px;line-height:1.7;color:#111;margin:0 0 18px}
+    .gallery-disclaimer{margin:16px 0 0;padding:11px 15px;border-left:3px solid var(--gold);background:#faf8f4;font-size:13px}
+    .gallery-grid{gap:15px}
+    .gallery-item{height:clamp(175px,19vw,265px);border-radius:8px}
+    .gallery-item::before{content:"+";position:absolute;z-index:2;top:12px;right:12px;width:29px;height:29px;display:grid;place-items:center;border:1px solid #ffffff88;border-radius:50%;color:#fff;background:#160a1480;font-size:23px;line-height:1}
+    .gallery-item span{right:12px}
+    .officers{grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+    .officer{border:1px solid #e9e1dd;background:linear-gradient(180deg,#fffdfa,#fff);box-shadow:0 4px 16px #271c2308;border-radius:8px;min-width:0;align-items:center}
+    .officer .avatar{width:54px;height:54px;font-family:Georgia,"Times New Roman",serif;font-size:26px;font-weight:700;border:1px solid #e5d6d1;color:var(--burgundy);background:#f7efec}
+    .officer h3{font-size:clamp(16px,1.2vw,19px);text-wrap:balance}
+    .officer p{font-size:13px;line-height:1.55}
+    .meeting-row{min-height:76px;border-radius:7px;background:#fbf9f6}
+    .meeting-row .month{display:flex;align-items:center;justify-content:center;border-radius:6px;background:#f5e7e9;border:1px solid #edcfd7;min-height:47px;font-size:15px;letter-spacing:.07em}
+    .meeting-row strong{font-size:15px}
+    .footer{background:#102542;position:relative;isolation:isolate;padding-top:0}
+    .footer-intro{display:grid;grid-template-columns:minmax(220px,.78fr) minmax(330px,1.5fr);gap:10px 35px;align-items:start;padding:39px 0 32px;border-bottom:1px solid #ffffff2b;margin-bottom:35px}
+    .footer-kicker{color:#eed4a1;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;grid-column:1}
+    .footer-intro h2{color:#fff;font-size:clamp(25px,2.5vw,38px);margin:0;grid-column:1;line-height:1.12}
+    .footer-intro p{font-size:14px;line-height:1.7;grid-column:2;grid-row:1 / span 2;margin:0;color:#fff}
+    .footer-contact-link{grid-column:2;display:inline-flex;align-items:center;gap:10px;width:fit-content;color:#fff!important;font-size:13px!important;font-weight:750;text-decoration:underline;text-underline-offset:5px}
+    .footer-contact-link svg{width:15px;height:15px}
+    .footer-top{grid-template-columns:1.2fr 1fr 1.15fr 1fr;gap:clamp(20px,2.8vw,48px)}
+    .footer-column{min-width:0}
+    .footer-column h3{font-family:Georgia,"Times New Roman",serif;color:#fff;font-size:18px;margin:0 0 15px}
+    .footer .footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:11px}
+    .footer .footer-links a,.footer .footer-links button{font-size:13px;line-height:1.55;text-decoration:none;color:#fff}
+    .footer .footer-links a:hover,.footer .footer-links button:hover,.footer-contact-link:hover{text-decoration:underline;text-underline-offset:4px}
+    .footer-identity p{font-size:13px;line-height:1.7;margin-top:18px}
+    .footer-location address{font-style:normal;font-size:14px;font-weight:650;line-height:1.65;color:#fff}
+    .footer-location p{font-size:13px;line-height:1.65;margin-top:14px}
+    .footer-location .footer-fineprint{font-size:12px}
+    .footer-download{background:transparent;border:0;padding:0;text-align:left;cursor:pointer;display:inline-flex;align-items:center;gap:7px;font-weight:700}
+    .footer-download svg{width:15px;height:15px}
+    .footer-photo-disclosure{padding-top:26px;border-top:1px solid #ffffff25;margin:30px 0 0;font-size:12px!important;line-height:1.6;max-width:900px;color:#fff}
+    .footer-bottom{margin-top:22px;padding-top:19px}
+    .footer-bottom strong{color:#fff}
+    @media(max-width:1180px){
+      .officers{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .footer-top{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 40px}
+    }
+    @media(max-width:800px){
+      .footer-intro{grid-template-columns:1fr;gap:12px}
+      .footer-kicker,.footer-intro h2,.footer-intro p,.footer-contact-link{grid-column:1;grid-row:auto}
+      .footer-intro p{max-width:700px}
+    }
+    @media(max-width:650px){
+      .gallery-item{height:155px}
+      .gallery-grid{gap:9px}
+      .officers{grid-template-columns:1fr}
+      .footer{padding:0 23px 22px}
+      .footer-intro{padding:33px 0 27px;margin-bottom:27px}
+      .footer-top{grid-template-columns:repeat(2,minmax(0,1fr));gap:31px 16px}
+      .footer-column h3{font-size:16px}
+      .footer .footer-links a,.footer .footer-links button{font-size:12px}
+      .footer-location address{font-size:13px}
+    }
+    @media(max-width:420px){
+      .footer-top{grid-template-columns:1fr;gap:25px}
+      .footer-intro h2{font-size:29px}
+      .gallery-item{height:135px}
+    }
+
   </style>
 </head>
 <body>
@@ -362,31 +426,35 @@
         <div class="benefit"><span class="benefit-icon"><svg fill="none" stroke="currentColor" stroke-width="1.7"><use href="#spark"></use></svg></span><h3>Rich Tradition</h3><p>Discover a heritage with meaning and purpose.</p></div>
       </section>
       <section id="gallery" class="panel section-pad">
-        <div class="section-topline"><div><span class="eyebrow">Our Winchester setting</span><h2>Chapter Gallery</h2></div><span class="badge-demo">Chilcomb Down House photos</span></div>
+        <div class="section-topline"><div><span class="eyebrow">A glimpse of Masonic spaces</span><h2>Photo Gallery</h2></div><span class="badge-demo">Illustrative venue photography</span></div>
+        <p class="gallery-introduction">These photographs show Chilcomb Down House, a separate Masonic venue. Wolvesey Chapter meets at <strong>Winchester Masonic Centre</strong>.</p>
         <div class="gallery-grid">
           <button class="gallery-item" type="button" data-gallery="0" aria-label="View the dressed dining room photograph"><img src="/images/chilcomb-dressed-dining.webp" alt="Function room set for dining at Chilcomb Down House" loading="lazy" decoding="async"><span>Dining &amp; fellowship</span></button>
           <button class="gallery-item" type="button" data-gallery="1" aria-label="View the Masonic display photograph"><img src="/images/chilcomb-masonic-roll.webp" alt="Display of Masonic regalia and emblems at Chilcomb Down House" loading="lazy" decoding="async"><span>Masonic heritage</span></button>
           <button class="gallery-item" type="button" data-gallery="2" aria-label="View the meeting room photograph"><img src="/images/chilcomb-meeting-conference.webp" alt="Meeting and conference room at Chilcomb Down House" loading="lazy" decoding="async"><span>Meeting spaces</span></button>
           <button class="gallery-item" type="button" data-gallery="3" aria-label="View the garden photograph"><img src="/images/chilcomb-down-view.webp" alt="Garden and views across Chilcomb Down from the venue" loading="lazy" decoding="async"><span>Chilcomb Down views</span></button>
         </div>
+        <p class="gallery-disclaimer">Gallery imagery is illustrative and does not depict Wolvesey Chapter meetings or the Winchester Masonic Centre.</p>
       </section>
       <section id="officers" class="panel section-pad">
-        <div class="section-topline"><h2>Our Chapter Officers</h2><span class="badge-demo">Example roles</span></div>
+        <div class="section-topline"><div><span class="eyebrow">The Chapter leadership</span><h2>Our Chapter Officers</h2></div><span class="badge-demo">Names awaiting confirmation</span></div>
+        <p class="section-intro">The three Principals and Scribe E help guide the Chapter. Names will be added once confirmed for publication.</p>
         <div class="officers">
-          <div class="officer"><span class="avatar"><svg fill="none" stroke="currentColor"><use href="#users"></use></svg></span><div><h3>First Principal</h3><p>Z · Name to be confirmed</p></div></div>
-          <div class="officer"><span class="avatar"><svg fill="none" stroke="currentColor"><use href="#users"></use></svg></span><div><h3>Second Principal</h3><p>H · Name to be confirmed</p></div></div>
-          <div class="officer"><span class="avatar"><svg fill="none" stroke="currentColor"><use href="#users"></use></svg></span><div><h3>Third Principal</h3><p>J · Name to be confirmed</p></div></div>
-          <div class="officer"><span class="avatar"><svg fill="none" stroke="currentColor"><use href="#users"></use></svg></span><div><h3>Scribe E</h3><p>Secretary · Name to be confirmed</p></div></div>
+          <div class="officer"><span class="avatar" aria-hidden="true">Z</span><div><h3>First Principal</h3><p>First Principal · Name to be confirmed</p></div></div>
+          <div class="officer"><span class="avatar" aria-hidden="true">H</span><div><h3>Second Principal</h3><p>Second Principal · Name to be confirmed</p></div></div>
+          <div class="officer"><span class="avatar" aria-hidden="true">J</span><div><h3>Third Principal</h3><p>Third Principal · Name to be confirmed</p></div></div>
+          <div class="officer"><span class="avatar" aria-hidden="true">E</span><div><h3>Scribe E</h3><p>Chapter Scribe E · Name to be confirmed</p></div></div>
         </div>
       </section>
       <div class="lower-grid">
         <section id="meetings" class="panel section-pad">
-          <div class="section-topline"><h2>Upcoming Meetings</h2><span class="badge-demo">Illustrative schedule</span></div>
-          <div class="meeting-row"><span class="month">—<small>JAN</small></span><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div></div>
-          <div class="meeting-row"><span class="month">—<small>MAR</small></span><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div></div>
-          <div class="meeting-row"><span class="month">—<small>OCT</small></span><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div></div>
-          <div class="meeting-row"><span class="month">—<small>DEC</small></span><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div></div>
-          <p class="hint">Actual dates, meeting times and dining information will be supplied by the Chapter.</p>
+          <div class="section-topline"><div><span class="eyebrow">Four times a year</span><h2>Regular Chapter Meetings</h2></div><span class="badge-demo">Dates to be confirmed</span></div>
+          <p class="section-intro">Wolvesey Chapter meets at Winchester Masonic Centre in January, March, October and December. Exact dates and times will be confirmed by the Chapter.</p>
+          <div class="meeting-row"><span class="month" aria-label="January">JAN</span><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div></div>
+          <div class="meeting-row"><span class="month" aria-label="March">MAR</span><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div></div>
+          <div class="meeting-row"><span class="month" aria-label="October">OCT</span><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div></div>
+          <div class="meeting-row"><span class="month" aria-label="December">DEC</span><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div></div>
+          <p class="hint">This is a regular meeting-month guide, not a summons or confirmed event schedule. Please enquire before arranging a visit.</p>
         </section>
         <section id="faq" class="panel section-pad">
           <div class="section-topline"><h2>Frequently Asked Questions</h2></div>
@@ -403,14 +471,43 @@
       </section>
     </div>
   </main>
-  <footer class="footer">
-    <div class="footer-top">
-      <div><a class="brand" href="#top"><span class="brand-logo"><img src="/images/hampshire-provincial-lockup-hd.png" alt="Hampshire and Isle of Wight Provincial coat of arms" width="2000" height="600" loading="lazy" decoding="async"></span><span class="brand-name">Hampshire &amp; Isle of Wight<br>Freemasons</span></a><p style="margin-top:18px">A Royal Arch Chapter page concept created to show how local Chapters could share their history, meeting information and welcoming spirit online.</p></div>
-      <div><h3>Explore</h3><div class="footer-links"><a href="#about">About the Chapter</a><a href="#history">Chapter History</a><a href="#meetings">Meeting Dates</a><a href="#officers">Our Officers</a></div></div>
-      <div><h3>Useful information</h3><div class="footer-links"><a href="https://www.ugle.org.uk/about-us/royal-arch" target="_blank" rel="noopener noreferrer">About the Royal Arch ↗</a><a href="#faq">Frequently Asked Questions</a><a href="#contact">Contact Us</a><button id="footer-download" type="button" style="background:none;border:0;padding:0;color:#ffffff;text-align:left;font-size:12px;cursor:pointer">Sample joining PDF ↓</button></div></div>
-      <div><h3>Chapter information</h3><p>Winchester Masonic Centre<br>Winchester, Hampshire<br><em>(meeting dates and contact information to be confirmed)</em></p><p>Gallery photographs show Chilcomb Down House, not the Chapter meeting venue. The hero shows Winchester Cathedral as local context.</p></div>
+  <footer class="footer" aria-label="Wolvesey Chapter website information">
+    <div class="footer-intro">
+      <span class="footer-kicker">Wolvesey Chapter No. 6818</span>
+      <h2>Royal Arch Freemasonry in Winchester</h2>
+      <p>Wolvesey Chapter No. 6818 is a Royal Arch Chapter meeting at Winchester Masonic Centre in Hampshire. Our Companions meet four times a year — January, March, October and December — to share in the traditions and fellowship of Royal Arch Freemasonry.</p>
+      <a class="footer-contact-link" href="#contact">Learn more about Wolvesey Chapter <svg fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#arrow"></use></svg></a>
     </div>
-    <div class="footer-bottom"><span>© 2026 Chapter website demonstration. Not an official Provincial publication.</span><span>Website concept built by <strong style="color:#fff">Legacy Interactive</strong></span></div>
+    <div class="footer-top">
+      <div class="footer-identity">
+        <a class="brand" href="#top" aria-label="Back to the Wolvesey Chapter page"><span class="brand-logo"><img src="/images/hampshire-provincial-lockup-hd.png" alt="Hampshire and Isle of Wight Provincial coat of arms" width="2000" height="600" loading="lazy" decoding="async"></span><span class="brand-name">Hampshire &amp; Isle of Wight<br>Freemasons</span></a>
+        <p>This demonstration shows how a Royal Arch Chapter can introduce its history, regular meetings and members online.</p>
+      </div>
+      <nav class="footer-column footer-links" aria-label="Explore Wolvesey Chapter">
+        <h3>Explore Wolvesey Chapter</h3>
+        <a href="#about">About Wolvesey Chapter</a>
+        <a href="#history">Chapter history and companions</a>
+        <a href="#officers">Chapter officers</a>
+        <a href="#meetings">Regular Chapter meetings</a>
+        <a href="#gallery">Photographs and gallery</a>
+      </nav>
+      <nav class="footer-column footer-links" aria-label="Royal Arch information">
+        <h3>Royal Arch information</h3>
+        <a href="https://www.ugle.org.uk/about-us/royal-arch" target="_blank" rel="noopener noreferrer">The Royal Arch at UGLE ↗</a>
+        <a href="#benefits">Why join the Royal Arch?</a>
+        <a href="#faq">Royal Arch questions and answers</a>
+        <a href="#contact">Enquire about Wolvesey Chapter</a>
+        <button id="footer-download" type="button" class="footer-download">Download the sample joining pack <svg fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><use href="#arrow"></use></svg></button>
+      </nav>
+      <div class="footer-column footer-location">
+        <h3>Chapter meeting location</h3>
+        <address>Winchester Masonic Centre<br>Winchester, Hampshire<br>England</address>
+        <p>Regular meetings: January, March, October and December.</p>
+        <p class="footer-fineprint">Exact dates, contact information and officer details are awaiting confirmation.</p>
+      </div>
+    </div>
+    <p class="footer-photo-disclosure">Photo information: the hero shows Winchester Cathedral as a local landmark. Gallery photographs show Chilcomb Down House, not the meeting venue. The Chapter group photograph is supplied for this demonstration.</p>
+    <div class="footer-bottom"><span>© 2026 Wolvesey Chapter No. 6818 — website demonstration only. Not an official Provincial publication.</span><span>Website concept built by <strong>Legacy Interactive</strong></span></div>
   </footer>
 </div>
 <dialog id="enquiry-dialog" aria-labelledby="enquiry-heading">

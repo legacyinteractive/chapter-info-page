@@ -16,9 +16,16 @@ for(const m of html.matchAll(/<img\b[^>]*>/g)){
 for(const m of html.matchAll(/<a\b[^>]*target="_blank"[^>]*>/g))assert(/\brel="[^"]*noopener/.test(m[0]),'target=_blank without noopener');
 assert(html.includes('name="robots" content="noindex, nofollow"'),'demo noindex removed');
 assert(html.includes('Wolvesey Chapter')&&html.includes('Winchester Masonic Centre'),'Chapter identification missing');
-assert(['JAN','MAR','OCT','DEC'].every(m=>html.includes('class="month">—<small>'+m+'</small>')),'meeting months incorrect');
+assert(['JAN','MAR','OCT','DEC'].every(m=>html.includes('class="month" aria-label="'+({JAN:'January',MAR:'March',OCT:'October',DEC:'December'})[m]+'">'+m+'</span>')),'meeting months incorrect');
 assert(html.includes('href="#main-content"')&&html.includes('id="main-content"'),'skip navigation missing');
 assert(html.includes('id="demo-enquiry"')&&html.includes('e.preventDefault()'),'demo enquiry guard missing');
+assert(html.includes('<footer class="footer" aria-label="Wolvesey Chapter website information">'),'semantic Chapter footer missing');
+assert(html.includes('Royal Arch Freemasonry in Winchester'),'local SEO heading/title missing');
+assert(html.includes('<address>Winchester Masonic Centre'),'Chapter location address missing');
+assert(html.includes('January, March, October and December'),'meeting months in body/footer missing');
+assert(html.includes('Gallery imagery is illustrative'),'image origin disclosure missing');
+assert(html.includes('Names awaiting confirmation'),'placeholder officer names disclosure missing');
+assert(!html.includes('Upcoming Meetings'),'unconfirmed upcoming events claim remains');
 const openScripts=[...html.matchAll(/<script(?![^>]*src)[^>]*>([\s\S]*?)<\/script>/g)];
 assert(openScripts.length===1,'unexpected inline script count');
 if(openScripts.length===1){try{new Function(openScripts[0][1]);}catch(error){failures.push('JavaScript parse error: '+error.message);}}
