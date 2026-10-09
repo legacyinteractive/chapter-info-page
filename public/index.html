@@ -463,6 +463,52 @@
       .footer--prestige .prestige-brand-name{font-size:19px}
       .footer--prestige .prestige-photo-note{font-size:12px!important}
     }
+
+    /* Chapter readiness / responsive photography and final layout guardrails. */
+    .site-shell,.main-content,.intro,.footer--prestige{min-width:0}
+    .hero-photo img{image-rendering:auto}
+    .history-photo img{max-width:100%;height:100%;object-fit:contain}
+    .history-photo figcaption{max-width:calc(100% - 46px);line-height:1.45}
+    .section-topline{gap:10px 16px}
+    .officer,.meeting-row,.download-card,.gallery-item{min-width:0}
+    .prestige-grid>*{min-width:0;overflow-wrap:anywhere}
+    .footer--prestige .prestige-brand-name{overflow-wrap:normal;hyphens:auto}
+    .footer--prestige .prestige-meeting-row{min-width:0}
+    .footer--prestige .prestige-brand-link:focus-visible{outline-offset:5px}
+    .footer--prestige .prestige-links a:focus-visible,
+    .footer--prestige .prestige-links button:focus-visible{outline-offset:4px}
+    .footer--prestige .prestige-photo-note{max-width:100%;overflow-wrap:break-word}
+    @media(min-width:821px) and (max-width:1240px){
+      .prestige-grid>:nth-child(4){grid-column:1}
+      .prestige-grid>:nth-child(5){grid-column:2 / 4}
+      .prestige-grid>:nth-child(4){border-left:0;padding-left:0}
+      .prestige-grid>:nth-child(5){min-height:0}
+    }
+    @media(min-width:1121px) and (max-width:1350px){
+      .header .nav{gap:clamp(11px,1.25vw,18px)}
+      .header .nav a{font-size:12px}
+    }
+    @media(max-width:1120px){
+      .header .nav{max-height:calc(100dvh - 76px);overflow-y:auto}
+    }
+    @media(max-width:590px){
+      .footer--prestige .prestige-grid>*{overflow-wrap:normal}
+      .footer--prestige .prestige-brand-link{max-width:100%}
+      .footer--prestige .prestige-bottom{padding-top:20px;padding-bottom:24px}
+      .footer--prestige .prestige-top-link{min-height:44px}
+      .history-photo figcaption{font-size:11px;left:15px;bottom:13px}
+    }
+    @media(max-width:380px){
+      .header .brand-name{font-size:11px}
+      .section-heading{overflow-wrap:break-word}
+      .footer--prestige .prestige-links a,
+      .footer--prestige .prestige-download{min-height:44px}
+      .footer--prestige .prestige-brand-name{font-size:17px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html:focus-within{scroll-behavior:auto}
+    }
+
   </style>
 </head>
 <body>
@@ -496,7 +542,9 @@
   <main id="main-content" class="main-content">
     <div class="intro">
       <div class="hero-photo">
-        <img src="https://images.unsplash.com/photo-1549541337-db015c252064?auto=format&amp;fit=crop&amp;w=2400&amp;q=85" alt="The ornate stone vaulted ceiling inside Winchester Cathedral, photographed by Zoltan Tasi" width="2400" height="920" fetchpriority="high" decoding="async">
+        <img src="https://images.unsplash.com/photo-1549541337-db015c252064?auto=format&amp;fit=crop&amp;w=2400&amp;q=85" alt="The ornate stone vaulted ceiling inside Winchester Cathedral, photographed by Zoltan Tasi" width="2400" height="920"
+          srcset="https://images.unsplash.com/photo-1549541337-db015c252064?auto=format&amp;fit=crop&amp;w=960&amp;q=82 960w, https://images.unsplash.com/photo-1549541337-db015c252064?auto=format&amp;fit=crop&amp;w=1600&amp;q=85 1600w, https://images.unsplash.com/photo-1549541337-db015c252064?auto=format&amp;fit=crop&amp;w=2400&amp;q=85 2400w"
+          sizes="(max-width: 930px) 100vw, 53vw" fetchpriority="high" decoding="async">
         <div class="hero-copy">
           <span class="eyebrow">✧ &nbsp; North Central Area</span>
           <h1>Wolvesey<br>Chapter<small>No. 6818</small></h1>
@@ -652,7 +700,7 @@
 </dialog>
 <dialog id="gallery-dialog" class="gallery-dialog" aria-label="Gallery photograph">
  <button class="close-dialog" type="button" aria-label="Close image"><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#close"></use></svg></button>
- <figure><img id="gallery-large" src="" alt=""><figcaption id="gallery-caption"></figcaption></figure>
+ <figure><img id="gallery-large" alt=""><figcaption id="gallery-caption"></figcaption></figure>
 </dialog>
 <script>
 (function(){
