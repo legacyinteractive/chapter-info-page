@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
-const root=new URL('../public/',import.meta.url);
-const html=fs.readFileSync(new URL('index.html',root),'utf8');
+import { fileURLToPath } from 'node:url';
+const root=fileURLToPath(new URL('../public/',import.meta.url));
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const failures=[];
 function assert(pass,label){if(!pass)failures.push(label);}
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);
@@ -10,7 +11,7 @@ for(const m of html.matchAll(/href="#([^"]+)"/g))assert(ids.includes(m[1]),'brok
 for(const m of html.matchAll(/<img\b[^>]*>/g)){
   const tag=m[0],src=tag.match(/\bsrc="([^"]*)"/)?.[1]||'';
   assert(tag.includes('alt='),'image missing alt');
-  if(src.startsWith('/'))assert(fs.existsSync(path.join(new URL('.',root).pathname,src.slice(1))),'missing asset '+src);
+  if(src.startsWith('/'))assert(fs.existsSync(path.join(root,src.slice(1))),'missing asset '+src);
 }
 for(const m of html.matchAll(/<a\b[^>]*target="_blank"[^>]*>/g))assert(/\brel="[^"]*noopener/.test(m[0]),'target=_blank without noopener');
 assert(html.includes('name="robots" content="noindex, nofollow"'),'demo noindex removed');
