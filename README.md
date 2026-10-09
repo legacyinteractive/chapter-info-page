@@ -65,3 +65,12 @@ The site currently carries a prominent demo notice; the Chapter's name, meeting 
 - Black body copy replaces grey text on light surfaces; white content remains white on dark panels.
 - The group photo is presented uncropped with slightly more contrast. The **current low-resolution AVIF is unchanged**; the previously prepared higher-resolution photograph still needs importing for genuine sharpness.
 - The noindex and demo safeguards remain.
+
+## Chapter layout and accessibility polish — 9 October 2026
+
+- First responsive polish batch: mobile navigation now collapses before tablet/laptop links collide; Escape, outside click and viewport resize close the menu.
+- Added a skip-to-content link, refined focus states, slightly larger card typography and balanced mobile/desktop section spacing.
+- Replaced misleading 'Find a Chapter' navigation with a Wolvesey-specific contact action; removed arrow-only affordances from the non-clickable provisional meeting rows.
+- Clarified that Chilcomb Down House gallery images are not photographs of Winchester Masonic Centre.
+- Added dependency-free static checks via `npm run check`, also run automatically during `npm run build`. They check broken internal anchors, duplicate IDs, missing local images, unsafe new-window links, demo noindex, meeting months, and JavaScript syntax.
+- This batch does not enable an enquiry backend, publish official meeting dates or relax the preview/demo safeguards.

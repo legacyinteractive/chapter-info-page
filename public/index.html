@@ -200,6 +200,85 @@
       .footer .brand-logo img{width:255px;left:-8px;top:-15px}
       .header .brand-name{font-size:12px}
     }
+
+    /* Batch 1: refined navigation, comfortable reading measures, and accessible interaction. */
+    .skip-link{position:absolute;z-index:100;top:-100px;left:16px;background:#fff;color:#111;border:3px solid var(--burgundy);border-radius:5px;padding:10px 15px;font-weight:750}
+    .skip-link:focus{top:8px}
+    .main-content:focus{outline:none}
+    .header .brand{min-width:0}
+    .header .brand-name{overflow-wrap:normal}
+    .header-cta,.button-primary,.button-outline{transition:background-color .18s ease,transform .18s ease,box-shadow .18s ease}
+    .button-primary:hover,.header-cta:hover{box-shadow:0 9px 22px rgba(103,0,34,.2)}
+    .button-outline:hover{background:#fff0f3}
+    .intro-details{gap:clamp(20px,2.2vw,32px)}
+    .intro-details p{line-height:1.72;margin-bottom:15px}
+    .intro-details .button-primary{margin-top:5px}
+    .download-card{border:1px solid #eee4e1}
+    .download-card>div{min-width:0}
+    .download-card p{font-size:13px;line-height:1.65}
+    .hero-copy{max-width:calc(100% - 38px)}
+    .hero-copy h1{text-wrap:balance}
+    .quick-link{min-width:0}
+    .quick-link span:last-child{overflow-wrap:break-word}
+    .content-stack{row-gap:20px}
+    .panel{box-shadow:0 9px 26px rgba(26,30,38,.045)}
+    .benefits{gap:10px}
+    .benefit p,.benefit-intro p{font-size:14px;line-height:1.55}
+    .benefit h3{font-size:17px}
+    .officer{padding:19px 16px;min-height:102px;gap:15px;background:#fffdfb}
+    .officer h3{font-size:17px}
+    .officer p{font-size:14px}
+    .meeting-row{grid-template-columns:64px minmax(0,1fr);gap:14px;padding:14px 15px;border:1px solid #f0ece7}
+    .meeting-row .month{color:var(--burgundy);font-weight:800;font-size:19px;text-align:center;line-height:1.1}
+    .meeting-row .month small{display:block;font-size:12px;letter-spacing:.06em;margin-top:5px}
+    .meeting-row strong{font-size:14px}
+    .meeting-row div>span{font-size:13px}
+    .gallery-item:focus-visible{outline:3px solid var(--burgundy);outline-offset:3px}
+    .gallery-item img{transition:transform .25s ease}
+    .form-control{border-color:#888;min-height:44px}
+    .form-control:focus-visible{outline:2px solid var(--burgundy);outline-offset:1px}
+    .quick-link:focus-visible{outline:3px solid white;outline-offset:-5px}
+    .dialog-inner h2{padding-right:30px}
+    @media (max-width:1120px){
+      .header{height:76px;min-height:76px;gap:12px}
+      .menu-toggle{display:block}
+      .nav{display:none;position:absolute;left:0;right:0;top:100%;padding:14px 24px 22px;background:#fff;flex-direction:column;align-items:stretch;gap:0;box-shadow:0 18px 26px rgba(15,20,30,.16);border-bottom:1px solid var(--line)}
+      .nav.is-open{display:flex}
+      .nav a{padding:11px 4px;font-size:15px;white-space:normal}
+      .search-link{display:none}
+      .benefits{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .benefit-intro{grid-column:1/-1}
+      .benefit{border-left:none;border-top:1px solid var(--line);padding:18px}
+      .officers{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (max-width:650px){
+      .header{height:72px;min-height:72px}
+      .hero-copy{max-width:calc(100% - 45px)}
+      .hero-copy h1{font-size:clamp(2.3rem,10vw,3.5rem)}
+      .hero-photo{min-height:470px}
+      .intro-details{padding:32px 24px}
+      .quick-links{min-height:0}
+      .quick-link{gap:10px;padding:17px 12px}
+      .benefits{padding:26px 17px;gap:8px}
+      .benefit{min-height:0;padding:17px 8px}
+      .benefit p{font-size:13px}
+      .officer p{font-size:13px}
+      .section-topline{flex-wrap:wrap;align-items:center}
+      .section-topline h2{font-size:clamp(1.55rem,7vw,1.85rem)}
+      .meeting-row{padding:12px 9px;grid-template-columns:49px minmax(0,1fr)}
+      .contact-section .copy{padding:30px 23px}
+    }
+    @media (max-width:380px){
+      .quick-link .icon-disc{width:36px;height:36px}
+      .quick-link span:last-child{font-size:12px}
+      .download-card{flex-direction:column}
+      .footer-top{grid-template-columns:1fr}
+      .hero-copy .location{font-size:14px}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .gallery-item img,.button-primary,.header-cta,.button-outline{transition:none}
+    }
+
   </style>
 </head>
 <body>
@@ -217,7 +296,8 @@
  <symbol id="menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
  <symbol id="close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
 </svg>
-<div class="site-shell">
+<div class="site-shell" id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="demo-ribbon"><strong>Website concept</strong><span>Draft Chapter information · Some hero imagery illustrative · Not an official Provincial website</span></div>
   <header class="header">
     <a class="brand" href="#top" aria-label="Chapter home">
@@ -225,13 +305,13 @@
       <span class="brand-name">Hampshire &amp; Isle of Wight<br>Freemasons</span>
     </a>
     <nav class="nav" id="site-nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#history">Our Heritage</a><a href="#benefits">Get Involved</a><a href="#gallery">Gallery</a><a href="#meetings">Meetings</a><a href="#faq" class="active">The Royal Arch</a>
+      <a href="#about">About</a><a href="#history">Our Heritage</a><a href="#benefits">Get Involved</a><a href="#gallery">Gallery</a><a href="#meetings">Meetings</a><a href="#faq">The Royal Arch</a>
     </nav>
-    <a class="search-link" href="#faq" aria-label="Find information"><svg fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5"/></svg></a>
-    <a class="header-cta" href="#contact">Find a Chapter <span aria-hidden="true">→</span></a>
+    <a class="search-link" href="#faq" aria-label="Jump to frequently asked questions"><svg fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5"/></svg></a>
+    <a class="header-cta" href="#contact">Contact Wolvesey <span aria-hidden="true">→</span></a>
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false"><svg stroke="currentColor" fill="none" stroke-width="2"><use href="#menu"></use></svg></button>
   </header>
-  <main id="top" class="main-content">
+  <main id="main-content" class="main-content">
     <div class="intro">
       <div class="hero-photo">
         <img src="https://images.unsplash.com/photo-1549541337-db015c252064?auto=format&amp;fit=crop&amp;w=2400&amp;q=85" alt="Winchester Cathedral exterior photographed by Zoltan Tasi" width="2400" height="920" fetchpriority="high" decoding="async">
@@ -244,7 +324,8 @@
       <section class="intro-details" id="about" aria-label="Chapter introduction">
         <div>
           <h2>About our Chapter</h2>
-          <p>Wolvesey Chapter No. 6818 is a welcoming Royal Arch Chapter based in historic Winchester, meeting at Winchester Masonic Centre. Our Chapter brings Companions together in friendship, fellowship and the traditions of the Royal Arch.</p><p>Meeting four times a year, we provide a place to continue your Masonic journey and enjoy the company of fellow Companions. Whether you would like to learn more about the Chapter or enquire about visiting, we would be pleased to hear from you.</p>
+          <p>Wolvesey Chapter No. 6818 is a welcoming Royal Arch Chapter based in historic Winchester, meeting at Winchester Masonic Centre. Our Companions come together in friendship and the traditions of the Royal Arch.</p>
+          <p>We meet four times a year, offering the opportunity to continue your Masonic journey and enjoy good company. If you would like to learn more or enquire about visiting, we would be pleased to hear from you.</p>
           <button class="button-primary" type="button" data-enquire>Enquire about this Chapter <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></button>
         </div>
         <div>
@@ -266,7 +347,7 @@
       <a class="quick-link" href="https://www.ugle.org.uk/about-us/royal-arch" target="_blank" rel="noopener noreferrer"><span class="icon-disc"><svg fill="none" stroke="currentColor" stroke-width="1.9"><use href="#book"></use></svg></span><span>Learn about the<br>Royal Arch <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></span></a>
       <a class="quick-link" href="#meetings"><span class="icon-disc"><svg fill="none" stroke="currentColor" stroke-width="1.9"><use href="#calendar"></use></svg></span><span>View upcoming<br>meetings <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></span></a>
       <a class="quick-link" href="#officers"><span class="icon-disc"><svg fill="none" stroke="currentColor" stroke-width="1.9"><use href="#users"></use></svg></span><span>Our members<br>and officers <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></span></a>
-      <a class="quick-link" href="#contact"><span class="icon-disc"><svg fill="none" stroke="currentColor" stroke-width="1.9"><use href="#pin"></use></svg></span><span>Find a Chapter<br>near you <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></span></a>
+      <a class="quick-link" href="#contact"><span class="icon-disc"><svg fill="none" stroke="currentColor" stroke-width="1.9"><use href="#pin"></use></svg></span><span>Contact Wolvesey<br>Chapter <svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></span></a>
     </nav>
     <div class="content-stack">
       <section id="history" class="panel history">
@@ -301,10 +382,10 @@
       <div class="lower-grid">
         <section id="meetings" class="panel section-pad">
           <div class="section-topline"><h2>Upcoming Meetings</h2><span class="badge-demo">Illustrative schedule</span></div>
-          <div class="meeting-row"><time>—<small>JAN</small></time><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></div>
-          <div class="meeting-row"><time>—<small>MAR</small></time><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></div>
-          <div class="meeting-row"><time>—<small>OCT</small></time><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></div>
-          <div class="meeting-row"><time>—<small>DEC</small></time><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#arrow"></use></svg></div>
+          <div class="meeting-row"><span class="month">—<small>JAN</small></span><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div></div>
+          <div class="meeting-row"><span class="month">—<small>MAR</small></span><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div></div>
+          <div class="meeting-row"><span class="month">—<small>OCT</small></span><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div></div>
+          <div class="meeting-row"><span class="month">—<small>DEC</small></span><div><strong>Regular Convocation</strong><span>Winchester Masonic Centre · Date TBC</span></div></div>
           <p class="hint">Actual dates, meeting times and dining information will be supplied by the Chapter.</p>
         </section>
         <section id="faq" class="panel section-pad">
@@ -327,7 +408,7 @@
       <div><a class="brand" href="#top"><span class="brand-logo"><img src="/images/hampshire-provincial-lockup-hd.png" alt="Hampshire and Isle of Wight Provincial coat of arms" width="2000" height="600" loading="lazy" decoding="async"></span><span class="brand-name">Hampshire &amp; Isle of Wight<br>Freemasons</span></a><p style="margin-top:18px">A Royal Arch Chapter page concept created to show how local Chapters could share their history, meeting information and welcoming spirit online.</p></div>
       <div><h3>Explore</h3><div class="footer-links"><a href="#about">About the Chapter</a><a href="#history">Chapter History</a><a href="#meetings">Meeting Dates</a><a href="#officers">Our Officers</a></div></div>
       <div><h3>Useful information</h3><div class="footer-links"><a href="https://www.ugle.org.uk/about-us/royal-arch" target="_blank" rel="noopener noreferrer">About the Royal Arch ↗</a><a href="#faq">Frequently Asked Questions</a><a href="#contact">Contact Us</a><button id="footer-download" type="button" style="background:none;border:0;padding:0;color:#ffffff;text-align:left;font-size:12px;cursor:pointer">Sample joining PDF ↓</button></div></div>
-      <div><h3>Chapter information</h3><p>Winchester Masonic Centre<br>Winchester, Hampshire<br><em>(meeting dates and contact information to be confirmed)</em></p><p>Venue photographs are from Chilcomb Down House. The hero image is illustrative, not a photograph of the Chapter.</p></div>
+      <div><h3>Chapter information</h3><p>Winchester Masonic Centre<br>Winchester, Hampshire<br><em>(meeting dates and contact information to be confirmed)</em></p><p>Gallery photographs show Chilcomb Down House, not the Chapter meeting venue. The hero shows Winchester Cathedral as local context.</p></div>
     </div>
     <div class="footer-bottom"><span>© 2026 Chapter website demonstration. Not an official Provincial publication.</span><span>Website concept built by <strong style="color:#fff">Legacy Interactive</strong></span></div>
   </footer>
@@ -347,7 +428,7 @@
   </form>
  </div>
 </dialog>
-<dialog id="gallery-dialog" class="gallery-dialog" aria-label="Gallery image">
+<dialog id="gallery-dialog" class="gallery-dialog" aria-label="Gallery photograph">
  <button class="close-dialog" type="button" aria-label="Close image"><svg fill="none" stroke="currentColor" stroke-width="2"><use href="#close"></use></svg></button>
  <figure><img id="gallery-large" src="" alt=""><figcaption id="gallery-caption"></figcaption></figure>
 </dialog>
@@ -355,15 +436,27 @@
 (function(){
   "use strict";
   var menuBtn=document.querySelector(".menu-toggle"),menu=document.getElementById("site-nav");
-  menuBtn.addEventListener("click",function(){var open=menu.classList.toggle("is-open");menuBtn.setAttribute("aria-expanded",String(open));menuBtn.setAttribute("aria-label",open?"Close navigation":"Open navigation");});
-  menu.querySelectorAll("a").forEach(function(link){link.addEventListener("click",function(){menu.classList.remove("is-open");menuBtn.setAttribute("aria-expanded","false");menuBtn.setAttribute("aria-label","Open navigation");});});
+  function setMenu(open){
+    menu.classList.toggle("is-open",open);
+    menuBtn.setAttribute("aria-expanded",String(open));
+    menuBtn.setAttribute("aria-label",open?"Close navigation":"Open navigation");
+  }
+  menuBtn.addEventListener("click",function(){setMenu(!menu.classList.contains("is-open"));});
+  menu.querySelectorAll("a").forEach(function(link){link.addEventListener("click",function(){setMenu(false);});});
+  document.addEventListener("keydown",function(event){
+    if(event.key==="Escape"&&menu.classList.contains("is-open")){setMenu(false);menuBtn.focus();}
+  });
+  document.addEventListener("click",function(event){
+    if(menu.classList.contains("is-open")&&!menu.contains(event.target)&&!menuBtn.contains(event.target))setMenu(false);
+  });
+  window.addEventListener("resize",function(){if(window.innerWidth>1120&&menu.classList.contains("is-open"))setMenu(false);});
   var enquiry=document.getElementById("enquiry-dialog");
   document.querySelectorAll("[data-enquire]").forEach(function(el){el.addEventListener("click",function(){enquiry.showModal();document.getElementById("form-status").hidden=true;});});
   enquiry.querySelector(".close-dialog").addEventListener("click",function(){enquiry.close();});
   enquiry.addEventListener("click",function(e){if(e.target===enquiry)enquiry.close();});
   document.getElementById("demo-enquiry").addEventListener("submit",function(e){e.preventDefault();document.getElementById("form-status").hidden=false;});
   var lightbox=document.getElementById("gallery-dialog");
-  document.querySelectorAll("[data-gallery]").forEach(function(el){el.addEventListener("click",function(){var img=el.querySelector("img");document.getElementById("gallery-large").src=img.src.replace(/w=600/,"w=1500");document.getElementById("gallery-large").alt=img.alt;document.getElementById("gallery-caption").textContent=el.querySelector("span").textContent+" · photograph of Chilcomb Down House, Winchester";lightbox.showModal();});});
+  document.querySelectorAll("[data-gallery]").forEach(function(el){el.addEventListener("click",function(){var img=el.querySelector("img");document.getElementById("gallery-large").src=img.currentSrc||img.src;document.getElementById("gallery-large").alt=img.alt;document.getElementById("gallery-caption").textContent=el.querySelector("span").textContent+" · photograph of Chilcomb Down House, Winchester";lightbox.showModal();});});
   lightbox.querySelector(".close-dialog").addEventListener("click",function(){lightbox.close();});
   lightbox.addEventListener("click",function(e){if(e.target===lightbox)lightbox.close();});
   function downloadPack(){

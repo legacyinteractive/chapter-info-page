@@ -4,8 +4,9 @@
   "private": true,
   "description": "Static Royal Arch Chapter demonstration",
   "scripts": {
-    "build": "node -e \"console.log('Static site: no compilation needed')\" ",
-    "deploy": "wrangler deploy"
+    "build": "npm run check",
+    "deploy": "wrangler deploy",
+    "check": "node scripts/verify-site.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.45.0"
